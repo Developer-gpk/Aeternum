@@ -1,0 +1,152 @@
+.block.aprender{
+    position: relative;
+    padding-top: 150px;
+    background: $background2;
+    .circulo{
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(90deg, #4e82e7 0%, #6039e4 48.26%, #771ee3 100%);
+        top: -30px;
+        left: 150px;
+        border-radius: 50%;
+    }
+    .holder{
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+        .container-fluid{
+            padding: 0 15px;
+            .title{
+                max-width: 551px;
+                width: 100%;
+                margin: 0 auto;
+                font-family: "Urbane-Bold";
+                font-size: 38px;
+                color: $degrado2;
+            }
+            .logo{
+                position: relative;
+                max-width: 200px;
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 35px;
+                img{
+                    position: relative !important;
+                    display: block;
+                }
+            }
+            .text{
+                margin-top: 35px;
+                max-width: 637px;
+                width: 100%;
+                margin: 35px auto 0 auto;
+                font-family: "Urbane-Light";
+                font-size: 18px;
+                color: $texto3;
+                text-align: center;
+                span{
+                    font-family: "Urbane-DemiBold";
+                    color: $degrado2;
+                }
+            }
+            .flex-row{
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 101px;
+                position: relative;
+                .tarjeta{
+                    max-width: 25%;
+                    width: 100%;
+                    padding: 45px 20px 59px 20px;
+                    background: $texto4;
+                    box-shadow: 0px 10px 15px rgba(0,0,0,0.06);
+                    border-radius: 16px;
+                    z-index: 2;
+                    .icono{
+                        max-width: 80px;
+                        width: 100%;
+                        margin: 0 auto;
+                        img{
+                            position: relative !important;
+                            display: block;
+                        }
+                    }
+                    .content-title{
+                        text-align: center;
+                        margin-top: 34px;
+                        font-family: "Urbane-Bold";
+                        font-size: 24px;
+                        color: $degrado2;
+                    }
+                    .content{
+                        text-align: center;
+                        margin-top: 19px;
+                        font-family: "Urbane-Light";
+                        font-size: 13px;
+                        color: $texto3;
+                        height: 84px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .block.aprender{
+        padding-top: 110px;
+        padding-bottom: 110px;
+        .circulo{
+            width: 40px;
+            height: 40px;
+            top: -20px;
+            left: 47px;
+        }
+        .holder{
+            padding: 0 22px;
+            .container-fluid{
+                padding: 0 0px;
+                .title{
+                    max-width: none;
+                    font-size: 23px;
+                    color: $degrado2;
+                }
+                .logo{
+                    max-width: 175px;
+                    margin-top: 35px;
+                }
+                .text{
+                    max-width: none;
+                    font-size: 15px;
+                }
+                .flex-row{
+                    display: block;
+                    margin-top: 60px;
+                    .tarjeta{
+                        max-width: none;
+                        width: 100%;
+                        padding: 25px 20px 25px 20px;
+                        background: none;
+                        box-shadow: none;
+                        .icono{
+                            max-width: 60px;
+                            width: 100%;
+                            margin: 0 auto;
+                            img{
+                                position: relative !important;
+                                display: block;
+                            }
+                        }
+                        .content-title{
+                            font-size: 22px;
+                        }
+                        .content{
+                            font-size: 12px;
+                            height: 76px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

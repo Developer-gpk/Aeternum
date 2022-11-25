@@ -1,0 +1,90 @@
+$background: #05003D;
+$background2: #F7F5FD;
+$degrado1: #4E82E7;
+$degrado2: #6039E4;
+$degrado3: #771EE3;
+$texto1: #FFFFFF;
+$texto2: #4E82E7;
+$texto3: #606060;
+$texto4: #FFFFFF;
+$texto5: #525252;
+$backgroundButton: #F78F1F;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.outer-wrapper{
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    background: $texto4;
+}
+.button-float{
+    display: none;
+}
+@media (max-width: 767px){
+    .button-float{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 11;
+        display: block;
+        a{
+            width: 100%;
+            height: 60px;
+            background: $backgroundButton;
+            padding: 20px 90px 18px 90px;
+            text-decoration: none;
+            font-family: "Urbane-Medium";
+            font-size: 14px;
+            color: $texto1;
+            display: block;
+            transition: all 0.2s ease-in;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-align: center;
+        }
+    }
+}
+@font-face {
+    font-family: "Urbane-Bold";
+    src: url("../fonts/Urbane-Bold.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Urbane-DemiBold";
+    src: url("../fonts/Urbane-DemiBold.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Urbane-Light";
+    src: url("../fonts/Urbane-Light.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Urbane-Medium";
+    src: url("../fonts/Urbane-Medium.ttf");
+    font-display: swap;
+}
+
+@import './navbar/navbar';
+@import './cover/cover';
+@import './expertos/expertos';
+@import './temario/temario';
+@import './inversion/inversion';
+@import './curso/curso';
+@import './aprender/aprender';
+@import './instructor/instructor';
+@import './pregunta/pregunta';
+@import './carousel/carousel';
+@import './contacto/contacto';
+@import './texto/texto';
+@import './footer/footer';
+@import './aviso/aviso';
