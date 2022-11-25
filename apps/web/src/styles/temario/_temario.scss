@@ -44,9 +44,15 @@
                     width: 100%;
                     .imagen{
                         width: 100%;
+                        overflow: hidden;
                         img{
                             display: block;
                             position: relative !important;
+                            transform: translateY(100%);
+                            transition: transform 1.5s ease;
+                            &.prueba{
+                                transform: translate(0px, 0%);
+                            }
                         }
                     }
                     .dia{
