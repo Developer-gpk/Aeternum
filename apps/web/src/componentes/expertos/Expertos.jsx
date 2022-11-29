@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { SmartPhone, Coin1, Coin2, Coin3, Coin4, Coin5, Coin6, AeternumIcon } from 'ui'
 import { Parallax  } from 'react-scroll-parallax'
 import BlockContent from "@sanity/block-content-to-react"
+import TextFade from '../textFade/TextFade'
 
 export default function Expertos({ title1, title2, title3 }){
     return(

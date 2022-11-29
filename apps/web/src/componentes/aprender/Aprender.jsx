@@ -1,10 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
+import Title from "react-vanilla-tilt"
 import { Logo } from 'ui'
 import { buildImages } from '../../../libs/complementos'
 import { Parallax  } from 'react-scroll-parallax'
 
 export default function Aprender({ aprende }){
+    const options = {
+        max: 30,
+        scale: 1.0,
+        speed: 1000
+    };
     return(
         <section className="block aprender" id="aprender">
             <Parallax speed={40}>
@@ -23,17 +29,19 @@ export default function Aprender({ aprende }){
                     </div>
                     <div className='flex-row'>
                         {aprende.map((apre, index) =>(
-                            <div className="tarjeta" key={index}>
-                                <div className='icono'>
-                                    <Image src={buildImages(apre?.imagen?.asset).url()} fill alt={`Icono-${index+1}`} />
+                            <Title className="tilt" options={options}>
+                                <div className="tarjeta" key={index}>
+                                    <div className='icono'>
+                                        <Image src={buildImages(apre?.imagen?.asset).url()} fill alt={`Icono-${index+1}`} />
+                                    </div>
+                                    <div className="content-title">
+                                        {apre.title}
+                                    </div>
+                                    <div className="content">
+                                        {apre.content}
+                                    </div>
                                 </div>
-                                <div className="content-title">
-                                    {apre.title}
-                                </div>
-                                <div className="content">
-                                    {apre.content}
-                                </div>
-                            </div>
+                            </Title>
                         ))}
                     </div>
                 </div>

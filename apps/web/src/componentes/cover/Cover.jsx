@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Textura1, Textura2, ImagenCover } from 'ui'
 import { Parallax  } from 'react-scroll-parallax'
+import TextFade from '../textFade/TextFade'
 
 export default function Cover({ title1, title2, title3}){
     return(
@@ -13,13 +14,19 @@ export default function Cover({ title1, title2, title3}){
             <div className='holder'>
                 <div className='container-fluid'>
                     <div className='texto-1'>
-                        Comienza tu experiencia en el mundo de las
+                        <TextFade>
+                            Comienza tu experiencia en el mundo de las
+                        </TextFade>
                     </div>
                     <div className='texto-2'>
-                        Criptomonedas y Blockchain con nuestro Crash Course.
+                        <TextFade>
+                            Criptomonedas y Blockchain con nuestro Crash Course.
+                        </TextFade>
                     </div>
                     <div className='text-3'>
-                        Tu llave al mundo crypto.
+                        <TextFade>
+                            Tu llave al mundo crypto.
+                        </TextFade>
                     </div>
                     <Link href="/#contacto" legacyBehavior>
                         <a>Inscríbete al Crash Course</a>

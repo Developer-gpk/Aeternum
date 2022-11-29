@@ -126,7 +126,14 @@ export default function Contacto(){
                                             </div>
                                             <div className="form-control">
                                                 <label htmlFor="horario" className={`${errors.horario && touched.horario ? ("isError") : null}`}>Horario deseado*</label>
-                                                <Field type="text" name='horario' className={`${errors.horario && touched.horario ? ("isError") : null}`} />
+                                                <select name='horario' className={`${errors.horario && touched.horario ? ("isError") : null}`}>
+                                                    <optgroup label="Lunes / Martes / Miércoles" />
+                                                    <option value="Lunes / Martes / Miércoles - 8:00 am a 9:30 am">8:00 am a 9:30 am</option>
+                                                    <option value="Lunes / Martes / Miércoles - 11:30 am a 13:00 pm">11:30 am a 13:00 pm</option>
+                                                    <optgroup label="Sábado y Domingo" />
+                                                    <option value="Sábado y Domingo - 8:00 am a 9:30 am">8:00 am a 9:30 am</option>
+                                                    <option value="Sábado y Domingo - 11:30 am a 13:00 pm">11:30 am a 13:00 pm</option>
+                                                </select>
                                             </div>
                                             <div className="complementos">
                                                 <div className='check'>
