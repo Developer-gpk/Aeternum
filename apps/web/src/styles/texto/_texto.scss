@@ -12,7 +12,7 @@
         border-radius: 50%;
     }
     .holder{
-        max-width: 1300px;
+        max-width: 1330px;
         width: 100%;
         margin: 0 auto;
         .container-fluid{
@@ -25,6 +25,7 @@
                 font-size: 10px;
                 color: $texto3;
                 margin: 0 auto;
+                line-height: 16px;
             }
         }
     }

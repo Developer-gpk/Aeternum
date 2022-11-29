@@ -25,7 +25,7 @@
         }
     }
     .holder{
-        max-width: 1300px;
+        max-width: 1330px;
         width: 100%;
         margin: 0 auto;
         .container-fluid{
@@ -38,6 +38,7 @@
                 font-family: "Urbane-Bold";
                 font-size: 38px;
                 color: $degrado1;
+                line-height: 49px;
             }
             .flex-row{
                 display: grid;
@@ -65,11 +66,12 @@
                         font-family: "Urbane-Light";
                         font-size: 16px;
                         color: $texto4;
+                        line-height: 27px;
                     }
                 }
             }
             .complemento{
-                max-width: 636px;
+                max-width: 743px;
                 width: 100%;
                 font-family: "Urbane-Bold";
                 font-size: 18px;
@@ -78,6 +80,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 text-align: center;
+                line-height: 28px;
             }
             .button{
                 text-align: center;

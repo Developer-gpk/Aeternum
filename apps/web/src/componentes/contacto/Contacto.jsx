@@ -130,7 +130,7 @@ export default function Contacto(){
                                             </div>
                                             <div className="form-control">
                                                 <label htmlFor="horario" className={`${errors.horario && touched.horario ? ("isError") : null}`}>Horario deseado*</label><br />
-                                                <button type='button' className={`horario-button ${open ? "horario-button-active" : ""} `} onClick={handleOpen}>{values.horario}</button>
+                                                <button type='button' className={`horario-button ${open ? "horario-button-active" : ""} `} onClick={handleOpen}>{values.horario} <i className='arrow'></i></button>
                                                 <div className={`horarios-button ${open ? "isOpen" : ""}`}>
                                                     <div className='horario1'>
                                                         <div className='titulo'>Lunes / Martes / Miércoles</div>

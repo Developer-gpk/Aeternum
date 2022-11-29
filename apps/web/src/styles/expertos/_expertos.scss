@@ -3,7 +3,7 @@
     padding: 255.6px 0 139px 0;
     background: $texto1;
     .holder{
-        max-width: 1300px;
+        max-width: 1330px;
         width: 100%;
         margin: 0 auto;
         .container-fluid{
@@ -52,6 +52,7 @@
                             border-bottom: solid 3px $texto2;  
                             transform: scaleX(0);  
                             transition: transform 250ms ease-in-out;
+                            margin-top: 10px;
                         }
                         &:hover::after{
                             transform: scaleX(1);

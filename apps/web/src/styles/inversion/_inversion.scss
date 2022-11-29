@@ -3,7 +3,7 @@
     padding: 115px 0 116px 0px;
     background: #f7f5fd;
     .holder{
-        max-width: 1300px;
+        max-width: 1330px;
         width: 100%;
         margin: 0 auto;
         .container-fluid{
@@ -14,6 +14,7 @@
                 .inversion{
                     max-width: 519px;
                     width: 100%;
+                    padding-top: 25px;
                     .title{
                         max-width: 163px;
                         width: 100%;
@@ -223,7 +224,7 @@
                                     font-family: "Urbane-Bold";
                                     font-size: 36px;
                                     color: $degrado2;
-                                    margin-bottom: 28px;
+                                    margin-bottom: 15px;
                                     strong{
                                         font-family: "Urbane-Bold";
                                         font-size: 20px;
@@ -242,11 +243,12 @@
                             .crypto{
                                 max-width: none;
                                 width: 100%;
+                                margin-top: 50px;
                                 .costo{
                                     font-family: "Urbane-Bold";
                                     font-size: 36px;
                                     color: $degrado2;
-                                    margin-bottom: 28px;
+                                    margin-bottom: 15px;
                                     strong{
                                         font-family: "Urbane-Bold";
                                         font-size: 20px;
@@ -276,6 +278,7 @@
                             font-size: 13px;
                             color: $texto3;
                             margin-bottom: 50px;
+                            text-align: center;
                         }
                         .button{
                             text-align: center;

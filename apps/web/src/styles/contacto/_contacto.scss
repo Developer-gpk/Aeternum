@@ -1,6 +1,6 @@
 .block.contacto{
     position: relative;
-    padding: 200px 0 150px 0;
+    padding: 200px 0 200px 0;
     background: $texto1;
     .textura{
         position: absolute;
@@ -23,7 +23,7 @@
         }
     }
     .holder{
-        max-width: 1300px;
+        max-width: 1330px;
         width: 100%;
         margin: 0 auto;
         .container-fluid{
@@ -49,7 +49,7 @@
             .flex-row{
                 margin-top: 129px;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: space-around;
                 .horarios-imagen{
                     max-width: 493px;
                     width: 100%;
@@ -110,6 +110,7 @@
                             img{
                                 position: relative !important;
                                 display: block;
+                                border-radius: 0;
                             }
                         }
                     }
@@ -162,14 +163,34 @@
                                 font-family: "Urbane-Light";
                                 font-size: 16px;
                                 color: $texto3;
-                                padding: 16px 16px;
+                                padding: 10px 50px 10px 16px;
                                 background: transparent;
                                 transition: all 0.2s ease-in;
+                                position: relative;
+                                .arrow{
+                                    background-image: url('../../../../../packages/ui/icono/arrow.svg');
+                                    background-repeat: no-repeat;
+                                    background-position-x: 95%;
+                                    background-position-y: 50%;
+                                    position: absolute;
+                                    right: 13.5px;
+                                    top: 50%;
+                                    width: 28px;
+                                    height: 15px;
+                                    transform: translateY(-50%);
+                                    transition: all 0.2s ease-in;
+                                }
                                 &.horario-button-active{
                                     border-bottom: none;
                                     border-bottom-left-radius: 0;
                                     border-bottom-right-radius: 0;
                                     transition: all 0.2s ease-in;
+                                    .arrow{
+                                        transform: rotateZ(90deg);
+                                        transition: all 0.2s ease-in;
+                                        top: 38%;
+
+                                    }
                                 }
                             }
                             .horarios-button{
@@ -186,6 +207,7 @@
                                 border-bottom-left-radius: 6px;
                                 border-bottom-right-radius: 6px;
                                 transition: all 0.2s ease-in;
+                                
                                 &.isOpen{
                                     display: block;
                                     transition: all 0.2s ease-in;
@@ -486,7 +508,7 @@
                                     height: 50px;
                                 }
                                 .horarios-button{
-                                    max-width: 356px;
+                                    max-width: 346px;
                                 }
                             }
                             .complementos{

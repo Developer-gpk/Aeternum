@@ -12,7 +12,7 @@
         }
     }
     .holder{
-        max-width: 1300px;
+        max-width: 1330px;
         width: 100%;
         margin: 0 auto;
         .container-fluid{
@@ -38,7 +38,7 @@
             }
             .flex-row{
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 .tarjeta{
                     max-width: 32%;
                     width: 100%;
@@ -67,7 +67,7 @@
                         font-size: 21px;
                         color: $background;
                         text-align: initial;
-                        margin-bottom: 55px;
+                        margin-bottom: 25px;
                         height: 60px;
                     }
                     .subtitle{

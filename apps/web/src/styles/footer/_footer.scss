@@ -18,7 +18,7 @@
         }
     }
     .holder{
-        max-width: 1300px;
+        max-width: 1330px;
         width: 100%;
         margin: 0 auto;
         .container-fluid{
@@ -38,6 +38,7 @@
                 font-family: "Urbane-DemiBold";
                 font-size: 18px;
                 color: $degrado1;
+                line-height: 26px;
             }
             .derechos{
                 display: flex;

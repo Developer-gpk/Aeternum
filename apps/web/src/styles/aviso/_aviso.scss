@@ -12,7 +12,7 @@
         }
     }
     .holder{
-        max-width: 1300px;
+        max-width: 1330px;
         width: 100%;
         margin: 0 auto;
         .container-fluid{
@@ -31,10 +31,13 @@
                 margin-top: 20px;
             }
             .content{
+                max-width: 857px;
+                width: 100%;
                 font-family: "Urbane-Medium";
                 font-size: 18px;
                 color: $texto3;
                 margin-top: 80px;
+                line-height: 28px;
             }
             .button{
                 margin-top: 392px;
@@ -69,6 +72,7 @@
                     margin-top: 5px;
                 }
                 .content{
+                    max-width: none;
                     font-size: 16px;
                     margin-top: 60px;
                 }
