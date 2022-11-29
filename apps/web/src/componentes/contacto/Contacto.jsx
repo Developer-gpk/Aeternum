@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Clock, BlockChain, Textura3, IconoC, IconoA } from 'ui'
@@ -7,6 +7,7 @@ import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
 
 export default function Contacto(){
+    const [ open, setOpen ] = useState(false);
     const validation = Yup.object().shape({
         nombre: Yup.string().required(),
         email: Yup.string().email().required(),
@@ -14,6 +15,9 @@ export default function Contacto(){
         horario: Yup.string().required(),
         aviso: Yup.boolean().oneOf([true])
     })
+    const handleOpen = () => {
+        setOpen(!open);
+    };    
     return(
         <section className="block contacto" id="contacto">
             <div className='textura'>
@@ -109,7 +113,7 @@ export default function Contacto(){
                                     console.log(values)
                                 }}
                             >
-                                {({isSubmitting, errors, touched}) =>(
+                                {({isSubmitting, errors, touched, values}) =>(
                                     <Form>
                                         <div className='form'>
                                             <div className="form-control">
@@ -125,15 +129,36 @@ export default function Contacto(){
                                                 <Field type="text" name='phone' className={`${errors.phone && touched.phone ? ("isError") : null}`} />
                                             </div>
                                             <div className="form-control">
-                                                <label htmlFor="horario" className={`${errors.horario && touched.horario ? ("isError") : null}`}>Horario deseado*</label>
-                                                <select name='horario' className={`${errors.horario && touched.horario ? ("isError") : null}`}>
-                                                    <optgroup label="Lunes / Martes / Miércoles" />
-                                                    <option value="Lunes / Martes / Miércoles - 8:00 am a 9:30 am">8:00 am a 9:30 am</option>
-                                                    <option value="Lunes / Martes / Miércoles - 11:30 am a 13:00 pm">11:30 am a 13:00 pm</option>
-                                                    <optgroup label="Sábado y Domingo" />
-                                                    <option value="Sábado y Domingo - 8:00 am a 9:30 am">8:00 am a 9:30 am</option>
-                                                    <option value="Sábado y Domingo - 11:30 am a 13:00 pm">11:30 am a 13:00 pm</option>
-                                                </select>
+                                                <label htmlFor="horario" className={`${errors.horario && touched.horario ? ("isError") : null}`}>Horario deseado*</label><br />
+                                                <button type='button' className={`horario-button ${open ? "horario-button-active" : ""} `} onClick={handleOpen}>{values.horario}</button>
+                                                <div className={`horarios-button ${open ? "isOpen" : ""}`}>
+                                                    <div className='horario1'>
+                                                        <div className='titulo'>Lunes / Martes / Miércoles</div>
+                                                        <div className='horas'>
+                                                            <div className='hora1'>
+                                                                <Field type="radio" name="horario" value="Lunes / Martes / Miércoles 8:00 am a 9:30 am HORA CDMX"/>
+                                                                <div className='label' >8:00 am a 9:30 am <span>HORA CDMX</span></div>
+                                                            </div>
+                                                            <div className='hora2'>
+                                                                <Field type="radio" name="horario" value="Lunes / Martes / Miércoles 11:30 am a 13:00 pm HORA CDMX"/>
+                                                                <div className='label'>11:30 am a 13:00 pm <span>HORA CDMX</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='horario2'>
+                                                        <div className='titulo'>Sábado y Domingo</div>
+                                                        <div className='horas'>
+                                                            <div className='hora1'>
+                                                                <Field type="radio" name="horario" value="Sábado y Domingo 8:00 am a 9:30 am HORA CDMX"/>
+                                                                <div className='label'>8:00 am a 9:30 am <span>HORA CDMX</span></div>
+                                                            </div>
+                                                            <div className='hora2'>
+                                                                <Field type="radio" name="horario" value="Sábado y Domingo 11:30 am a 13:00 pm HORA CDMX" />
+                                                                <div className='label'>11:30 am a 13:00 pm <span>HORA CDMX</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
                                             </div>
                                             <div className="complementos">
                                                 <div className='check'>

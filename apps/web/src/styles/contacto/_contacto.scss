@@ -139,7 +139,6 @@
                                 font-size: 18px;
                                 color: $texto3;
                                 padding: 16px 25px;
-                                -webkit-appearance: none;
                                 &:focus-visible{
                                     outline: none;
                                 }
@@ -154,10 +153,142 @@
                             &:first-child{
                                 padding-top: 0px;
                             }
-                            .item-content {
-                                height: 0;
-                                
-                                transition: all 550ms ease-in-out;
+                            .horario-button{
+                                width: 100%;
+                                height: 60px;
+                                margin-top: 15px;
+                                border-radius: 6px;
+                                border: 1px solid $degrado2;
+                                font-family: "Urbane-Light";
+                                font-size: 16px;
+                                color: $texto3;
+                                padding: 16px 16px;
+                                background: transparent;
+                                transition: all 0.2s ease-in;
+                                &.horario-button-active{
+                                    border-bottom: none;
+                                    border-bottom-left-radius: 0;
+                                    border-bottom-right-radius: 0;
+                                    transition: all 0.2s ease-in;
+                                }
+                            }
+                            .horarios-button{
+                                max-width: 524px;
+                                width: 100%;
+                                padding: 25px;
+                                border: 1px solid $degrado2;
+                                margin-top: -1px;
+                                background: #FFF;
+                                z-index: 2;
+                                display: none;
+                                position: absolute;
+                                border-top: none;
+                                border-bottom-left-radius: 6px;
+                                border-bottom-right-radius: 6px;
+                                transition: all 0.2s ease-in;
+                                &.isOpen{
+                                    display: block;
+                                    transition: all 0.2s ease-in;
+                                }
+                                .horario1{
+                                    .titulo{
+                                        width: 100%;
+                                        font-family: "Urbane-DemiBold";
+                                        font-size: 18px;
+                                        color: $background;
+                                    }
+                                    .horas{
+                                        display: flex;
+                                        margin-top: 20px;
+                                        justify-content: space-between;
+                                        .hora1{
+                                            display: flex;
+                                            input[type=radio]{
+                                                width: 20px;
+                                                height: 20px;
+                                                margin-top: 0;
+                                            }
+                                            .label{
+                                                max-width: 137px;
+                                                margin-left: 15px;
+                                                font-family: "Urbane-Light";
+                                                font-size: 14px;
+                                                color: $texto3;
+                                                span{
+                                                    font-family: "Urbane-DemiBold";
+                                                }
+                                            }
+                                        }
+                                        .hora2{
+                                            display: flex;
+                                            input[type=radio]{
+                                                width: 20px;
+                                                height: 20px;
+                                                margin-top: 0;
+                                            }
+                                            .label{
+                                                max-width: 139px;
+                                                margin-left: 15px;
+                                                font-family: "Urbane-Light";
+                                                font-size: 14px;
+                                                color: $texto3;
+                                                span{
+                                                    font-family: "Urbane-DemiBold";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .horario2{
+                                    margin-top: 60px;
+                                    .titulo{
+                                        width: 100%;
+                                        font-family: "Urbane-DemiBold";
+                                        font-size: 18px;
+                                        color: $background;
+                                    }
+                                    .horas{
+                                        display: flex;
+                                        margin-top: 20px;
+                                        justify-content: space-between;
+                                        .hora1{
+                                            display: flex;
+                                            input[type=radio]{
+                                                width: 20px;
+                                                height: 20px;
+                                                margin-top: 0;
+                                            }
+                                            .label{
+                                                max-width: 137px;
+                                                margin-left: 15px;
+                                                font-family: "Urbane-Light";
+                                                font-size: 14px;
+                                                color: $texto3;
+                                                span{
+                                                    font-family: "Urbane-DemiBold";
+                                                }
+                                            }
+                                        }
+                                        .hora2{
+                                            display: flex;
+                                            input[type=radio]{
+                                                width: 20px;
+                                                height: 20px;
+                                                margin-top: 0;
+                                            }
+                                            .label{
+                                                max-width: 139px;
+                                                margin-left: 15px;
+                                                font-family: "Urbane-Light";
+                                                font-size: 14px;
+                                                color: $texto3;
+                                                span{
+                                                    font-family: "Urbane-DemiBold";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                         .complementos{
@@ -353,6 +484,9 @@
                                 input{
                                     width: 100%;
                                     height: 50px;
+                                }
+                                .horarios-button{
+                                    max-width: 356px;
                                 }
                             }
                             .complementos{
