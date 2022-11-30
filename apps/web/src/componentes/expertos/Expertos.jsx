@@ -4,23 +4,58 @@ import Link from 'next/link'
 import { SmartPhone, Coin1, Coin2, Coin3, Coin4, Coin5, Coin6, AeternumIcon } from 'ui'
 import { Parallax  } from 'react-scroll-parallax'
 import BlockContent from "@sanity/block-content-to-react"
-import TextFade from '../textFade/TextFade'
+import { MovingComponent } from 'react-moving-text'
+import { useInView } from "react-hook-inview"
 
 export default function Expertos({ title1, title2, title3 }){
+    const [ref, inView] = useInView({ threshold: 0 });
     return(
         <section className='block expertos' id='expertos'>
             <div className='holder'>
                 <div className='container-fluid'>
                     <div className='flex-row'>
                         <div className='texto'>
-                            <div className='texto1'>
-                                <BlockContent blocks={title1} />
+                            <div className='texto1' ref={ref}>
+                                {inView ?  
+                                    <MovingComponent
+                                        type="slideInFromTop"
+                                        duration="1000ms"
+                                        delay="0s"
+                                        direction="normal"
+                                        timing="ease-in-out"
+                                        iteration="1"
+                                        fillMode="none">
+                                        <BlockContent blocks={title1} />
+                                    </MovingComponent>
+                                : (<BlockContent blocks={title1} />)}
                             </div>
-                            <div className='texto2'>
-                                <BlockContent blocks={title2} />
+                            <div className='texto2' ref={ref}>
+                                {inView ?  
+                                    <MovingComponent
+                                        type="slideInFromTop"
+                                        duration="1000ms"
+                                        delay="0s"
+                                        direction="normal"
+                                        timing="ease-in-out"
+                                        iteration="1"
+                                        fillMode="none">
+                                        <BlockContent blocks={title2} />
+                                    </MovingComponent>
+                                : (<BlockContent blocks={title2} />)}
                             </div>
-                            <div className='texto1 espacio'>
-                                <BlockContent blocks={title3} />
+                            <div className='texto1 espacio' ref={ref}>
+                                {inView ?  
+                                    <MovingComponent
+                                        type="slideInFromTop"
+                                        duration="1000ms"
+                                        delay="0s"
+                                        direction="normal"
+                                        timing="ease-in-out"
+                                        iteration="1"
+                                        fillMode="none">
+                                        <BlockContent blocks={title3} />
+                                    </MovingComponent>
+                                : (<BlockContent blocks={title3} />)}
                             </div>
                             <Link href="/#contacto" legacyBehavior>
                                 <a>Has llegado con los expertos.</a>
