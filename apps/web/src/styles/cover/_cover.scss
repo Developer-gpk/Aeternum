@@ -46,25 +46,87 @@
                 font-size: 24px;
                 color: $texto1;
                 margin-bottom: 9px;
-                flex-wrap: wrap;
-                display: flex;
+                span{
+                    width: 100%;
+                    color: $texto1;
+                    -webkit-clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
+                    clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
+                    transform: translateY(-50px);
+                    opacity: 0;
+                    animation-name: titleAnimation;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 2s;
+                    animation-delay: 0.6s;
+                    -webkit-animation-fill-mode: forwards;
+
+                    &:first-child{
+                        animation-delay: 0.7s;
+
+                    }
+
+                    &:last-child{
+                        color: $texto1;
+                        animation-delay: 0.5s;
+                    }
+                }
             }
             .texto-2{
                 font-family: "Urbane-Bold";
                 font-size: 46px;
                 color: $texto1;
                 margin-bottom: 25px;
-                flex-wrap: wrap;
-                display: flex;
-                height: 112px;
+                span{
+                    width: 100%;
+                    color: $texto1;
+                    -webkit-clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
+                    clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
+                    transform: translateY(-50px);
+                    opacity: 0;
+                    animation-name: titleAnimation;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 2s;
+                    animation-delay: 1.6s;
+                    -webkit-animation-fill-mode: forwards;
+
+                    &:first-child{
+                        animation-delay: 1.7s;
+
+                    }
+
+                    &:last-child{
+                        color: $texto1;
+                        animation-delay: 1.5s;
+                    }
+                }
             }
             .text-3{
                 font-family: "Urbane-DemiBold";
                 font-size: 20px;
                 color: $texto2;
                 margin-bottom: 50px;
-                flex-wrap: wrap;
-                display: flex;
+                span{
+                    width: 100%;
+                    color: $texto2;
+                    -webkit-clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
+                    clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
+                    transform: translateY(-50px);
+                    opacity: 0;
+                    animation-name: titleAnimation;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 2s;
+                    animation-delay: 2.6s;
+                    -webkit-animation-fill-mode: forwards;
+
+                    &:first-child{
+                        animation-delay: 2.7s;
+
+                    }
+
+                    &:last-child{
+                        color: $texto2;
+                        animation-delay: 2.5s;
+                    }
+                }
             }
             a{
                 max-width: 250px;
@@ -179,4 +241,20 @@
 @keyframes fadeout { 
     from { opacity: 1;transform: translateZ(0); } 
     to {   opacity: 0;transform: translateZ(0); } 
+}
+
+@keyframes titleAnimation {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+      -webkit-clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
+      clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 15%, 100% 100%, 0 100%, 0 0);
+        clip-path: polygon(100% 15%, 100% 100%, 0 100%, 0 0);
+    }
+    
 }

@@ -8,9 +8,6 @@ import { useInView } from "react-hook-inview"
 
 export default function Cover({ title1, title2, title3}){
     const [ref, inView] = useInView({ threshold: 0 });
-    const Letters1 = ["Comienza", "tu", "experiencia", "en", "el", "mundo", "de las"]
-    const Letters2 = ["Criptomonedas", "y", "Blockchain", "con", "nuestro", "Crash", "Course."]
-    const Letters3 = ["Tu llave", "al mundo", "crypto."]
     return(
         <section className='block cover' id='cover'>
             <div className='textura1'>
@@ -18,50 +15,21 @@ export default function Cover({ title1, title2, title3}){
             </div>
             <div className='holder'>
                 <div className='container-fluid'>
-                    <div className={`texto-1 `} ref={ref}>
-                        {Letters1.map((letter, index) =>(
-                            <MovingComponent
-                                type={inView ? "slideInFromTop" : ""}
-                                duration="1000ms"
-                                delay={`${index * 90+"ms"}`}
-                                direction="normal"
-                                timing="ease-in-out"
-                                iteration="1"
-                                fillMode="none"
-                            >
-                                {letter}&nbsp;
-                            </MovingComponent>
-                        ))}
+                    <div className={`texto-1`} ref={ref}>
+                        <span>Comienza tu </span>
+                        <span>experiencia en el </span>
+                        <span>mundo de las</span>
                     </div>
                     <div className='texto-2'>
-                        {Letters2.map((letter, index) =>(
-                            <MovingComponent
-                                type={inView ? "slideInFromTop" : ""}
-                                duration="1000ms"
-                                delay={`${index * 90+"ms"}`}
-                                direction="normal"
-                                timing="ease-in-out"
-                                iteration="1"
-                                fillMode="none"
-                            >
-                                {letter}&nbsp;
-                            </MovingComponent>
-                        ))}
+                        <span>Criptomonedas </span>
+                        <span>y Blockchain </span>
+                        <span>con nuestro </span>
+                        <span>Crash Course.</span>
                     </div>
                     <div className='text-3'>
-                        {Letters3.map((letter, index) =>(
-                            <MovingComponent
-                                type={inView ? "slideInFromTop" : ""}
-                                duration="1000ms"
-                                delay={`${index * 90+"ms"}`}
-                                direction="normal"
-                                timing="ease-in-out"
-                                iteration="1"
-                                fillMode="none"
-                            >
-                                {letter}&nbsp;
-                            </MovingComponent>
-                        ))}
+                        <span>Tu llave </span>
+                        <span>al mundo </span>
+                        <span>crypto. </span>
                     </div>
                     <Link href="/#contacto" legacyBehavior>
                         <a>Inscríbete al Crash Course</a>
