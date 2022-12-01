@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Textura1, Textura2, ImagenCover } from 'ui'
 import { Parallax  } from 'react-scroll-parallax'
-import { MovingComponent } from 'react-moving-text'
 import { useInView } from "react-hook-inview"
 
 export default function Cover({ title1, title2, title3}){
@@ -15,21 +14,43 @@ export default function Cover({ title1, title2, title3}){
             </div>
             <div className='holder'>
                 <div className='container-fluid'>
-                    <div className={`texto-1`} ref={ref}>
-                        <span>Comienza tu </span>
-                        <span>experiencia en el </span>
-                        <span>mundo de las</span>
+                    <div className="texto-1" ref={ref}>
+                        {inView ? (
+                            <>
+                                <p className={`${inView ? "isActive" : ""}`}>Comienza&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>tu&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>experiencia&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>en&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>el&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>mundo&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>de&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>las&nbsp;</p>
+                            </>
+                        ) : ("")}
                     </div>
                     <div className='texto-2'>
-                        <span>Criptomonedas </span>
-                        <span>y Blockchain </span>
-                        <span>con nuestro </span>
-                        <span>Crash Course.</span>
+                        {inView ? (
+                            <>
+                                <p className={`${inView ? "isActive" : ""}`}>Criptomonedas&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>y&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>Blockchain&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>con&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>nuestro&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>Crash&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>Course.&nbsp;</p>
+                            </>
+                        ) : ""}
                     </div>
                     <div className='text-3'>
-                        <span>Tu llave </span>
-                        <span>al mundo </span>
-                        <span>crypto. </span>
+                        {inView ? (
+                            <>
+                                <p className={`${inView ? "isActive" : ""}`}>Tu&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>llave&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>al&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>mundo&nbsp;</p>
+                                <p className={`${inView ? "isActive" : ""}`}>crypto.&nbsp;</p>
+                            </>
+                        ) : ""}
                     </div>
                     <Link href="/#contacto" legacyBehavior>
                         <a>Inscríbete al Crash Course</a>

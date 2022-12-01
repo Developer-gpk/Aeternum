@@ -17,7 +17,13 @@ export default function Contacto(){
     })
     const handleOpen = () => {
         setOpen(!open);
-    };    
+    };
+    function prueba(values){
+        console.log(values)
+        return(
+            <h1>Hola</h1>
+        )
+    }
     return(
         <section className="block contacto" id="contacto">
             <div className='textura'>
@@ -110,7 +116,7 @@ export default function Contacto(){
                                 }}
                                 validationSchema={validation}
                                 onSubmit={ async (values) =>{
-                                    console.log(values)
+                                    return prueba(values)
                                 }}
                             >
                                 {({isSubmitting, errors, touched, values}) =>(

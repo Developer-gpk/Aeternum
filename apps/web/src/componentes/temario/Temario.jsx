@@ -1,25 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
-
 import { Textura3 } from 'ui'
 import { buildImages } from '../../../libs/complementos'
+import { useInView } from "react-hook-inview"
 
 export default function Temario({ dias }){
     const [ up, setUp ] = useState(false)
-    const algo = useRef()
-    const Animation = () =>{
-        const prueba = algo.current
-        if(!prueba) return
-        if(prueba.getBoundingClientRect().top <= 598){
-            setUp(true)
-        } else{
-            setUp(false)
-        }
-    }
-    useEffect(() =>{
-        Animation()
-        window.addEventListener('scroll', Animation)
-    }, [])
+    const [ref, inView] = useInView({ threshold: 0 });
     return(
         <section className='block temario' id='temario'>
             <div className='textura'>
@@ -32,8 +19,8 @@ export default function Temario({ dias }){
                     <div className='flex-row'>
                         {dias?.map((dia, index) =>(
                             <div className='tarjeta' key={index}>
-                                <div className='imagen' ref={algo}>
-                                    <Image src={buildImages(dia?.imagen?.asset).url()} fill alt={`Dia ${index+1}`} className={`${up ? "prueba" : ""}`}  />
+                                <div className='imagen' ref={ref}>
+                                    <Image src={buildImages(dia?.imagen?.asset).url()} fill alt={`Dia ${index+1}`} className={`${inView ? "prueba" : ""}`} data-delay={`${index * 1}`}  />
                                 </div>
                                 <div className='dia'>Día {index+1}</div>
                                 <div className='title'>{dia?.title}</div>

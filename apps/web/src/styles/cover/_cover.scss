@@ -46,27 +46,51 @@
                 font-size: 24px;
                 color: $texto1;
                 margin-bottom: 9px;
-                span{
-                    width: 100%;
+                display: flex;
+                height: 28px;
+                overflow: hidden;
+                p{
                     color: $texto1;
-                    -webkit-clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
-                    clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
-                    transform: translateY(-50px);
+                    // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	                //animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    display: block;
+                    will-change: opacity, transform;
                     opacity: 0;
-                    animation-name: titleAnimation;
-                    animation-timing-function: ease-in-out;
-                    animation-duration: 2s;
-                    animation-delay: 0.6s;
-                    -webkit-animation-fill-mode: forwards;
-
-                    &:first-child{
-                        animation-delay: 0.7s;
+                    transform: translateY(100%) translateZ(0);
+                    animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                    &.isActive{
+                        transform: translateY(-10%) translateZ(0);
+                        animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                    }
+                    &:nth-child(1){
+                        animation-delay: 0.0s;
 
                     }
-
+                    &:nth-child(2){
+                        animation-delay: 0.2s;
+                    }
                     &:last-child{
-                        color: $texto1;
-                        animation-delay: 0.5s;
+                        animation-delay: 0.4s;
+                    }
+                    &:nth-child(3){
+                        animation-delay: 0.6s;
+
+                    }
+                    &:nth-child(4){
+                        animation-delay: 0.8s;
+                    }
+                    &:nth-child(5){
+                        animation-delay: 1s;
+                    }
+                    &:nth-child(6){
+                        animation-delay: 1.2s;
+
+                    }
+                    &:nth-child(7){
+                        animation-delay: 1.4s;
+                    }
+                    &:nth-child(8){
+                        animation-delay: 1.6s;
                     }
                 }
             }
@@ -75,27 +99,49 @@
                 font-size: 46px;
                 color: $texto1;
                 margin-bottom: 25px;
-                span{
-                    width: 100%;
+                display: flex;
+                height: 112px;
+                overflow: hidden;
+                flex-wrap: wrap;
+                p{
                     color: $texto1;
-                    -webkit-clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
-                    clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
-                    transform: translateY(-50px);
+                    // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	                //animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    display: block;
+                    will-change: opacity, transform;
                     opacity: 0;
-                    animation-name: titleAnimation;
-                    animation-timing-function: ease-in-out;
-                    animation-duration: 2s;
-                    animation-delay: 1.6s;
-                    -webkit-animation-fill-mode: forwards;
-
-                    &:first-child{
-                        animation-delay: 1.7s;
+                    transform: translateY(100%) translateZ(0);
+                    animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                    &.isActive{
+                        transform: translateY(-10%) translateZ(0);
+                        animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                    }
+                    &:nth-child(1){
+                        animation-delay: 1.8s;
 
                     }
-
+                    &:nth-child(2){
+                        animation-delay: 2s;
+                    }
                     &:last-child{
-                        color: $texto1;
-                        animation-delay: 1.5s;
+                        animation-delay: 2.2s;
+                    }
+                    &:nth-child(3){
+                        animation-delay: 2.4s;
+
+                    }
+                    &:nth-child(4){
+                        animation-delay: 2.6s;
+                    }
+                    &:nth-child(5){
+                        animation-delay: 2.8s;
+                    }
+                    &:nth-child(6){
+                        animation-delay: 3s;
+
+                    }
+                    &:nth-child(7){
+                        animation-delay: 3.2s;
                     }
                 }
             }
@@ -104,27 +150,42 @@
                 font-size: 20px;
                 color: $texto2;
                 margin-bottom: 50px;
-                span{
-                    width: 100%;
+                display: flex;
+                height: 24px;
+                overflow: hidden;
+                flex-wrap: wrap;
+                p{
                     color: $texto2;
-                    -webkit-clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
-                    clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
-                    transform: translateY(-50px);
+                    // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	                //animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    display: block;
+                    will-change: opacity, transform;
                     opacity: 0;
-                    animation-name: titleAnimation;
-                    animation-timing-function: ease-in-out;
-                    animation-duration: 2s;
-                    animation-delay: 2.6s;
-                    -webkit-animation-fill-mode: forwards;
-
-                    &:first-child{
-                        animation-delay: 2.7s;
+                    transform: translateY(100%) translateZ(0);
+                    animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                    &.isActive{
+                        transform: translateY(-10%) translateZ(0);
+                        animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                    }
+                    &:nth-child(1){
+                        animation-delay: 3.4s;
 
                     }
-
+                    &:nth-child(2){
+                        animation-delay: 3.6s;
+                    }
                     &:last-child{
-                        color: $texto2;
-                        animation-delay: 2.5s;
+                        animation-delay: 3.8s;
+                    }
+                    &:nth-child(3){
+                        animation-delay: 4s;
+
+                    }
+                    &:nth-child(4){
+                        animation-delay: 4.2s;
+                    }
+                    &:nth-child(5){
+                        animation-delay: 4.4s;
                     }
                 }
             }
@@ -213,16 +274,23 @@
                     font-size: 20px;
                     margin-bottom: 10px;
                     text-align: center;
+                    height: 48px;
+                    flex-wrap: wrap;
+                    justify-content: center;
                 }
                 .texto-2{
                     font-size: 40px;
                     margin-bottom: 15px;
                     text-align: center;
+                    height: 192px;
+                    justify-content: center;
                 }
                 .text-3{
                     font-size: 18px;
                     margin-bottom: 46px;
                     text-align: center;
+                    height: 22px;
+                    justify-content: center;
                 }
                 a{
                     max-width: 240px;
@@ -234,27 +302,15 @@
     }
 }
 
-@keyframes fadein { 
-    from { opacity: 0;transform: translateZ(0); } 
-    to {   opacity: 1;transform: translateZ(0); }  
-}
-@keyframes fadeout { 
-    from { opacity: 1;transform: translateZ(0); } 
-    to {   opacity: 0;transform: translateZ(0); } 
-}
+@keyframes line_enter {
+	0% {
+        opacity: 0;
+        transform: translateY(100%) rotate(4deg) translateZ(0);
+	}
 
-@keyframes titleAnimation {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-      -webkit-clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
-      clip-path: polygon(100% 80%, 100% 100%, 0 100%, 0 0);
-    }
-    100% {
-        transform: translateY(0);
+	100% {
         opacity: 1;
-        -webkit-clip-path: polygon(100% 15%, 100% 100%, 0 100%, 0 0);
-        clip-path: polygon(100% 15%, 100% 100%, 0 100%, 0 0);
-    }
-    
+        transform: translateY(-15%) translateZ(0);
+	}
 }
+  
