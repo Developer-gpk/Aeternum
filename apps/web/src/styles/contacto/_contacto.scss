@@ -433,6 +433,8 @@
                                 .paypal{
                                     width: 284px;
                                     height: 50px;
+                                    position: relative;
+                                    z-index: 1;
                                 }
                                 .hidden{
                                     display: none;
