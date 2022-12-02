@@ -5,9 +5,12 @@ import { Clock, BlockChain, Textura3, IconoC, IconoA } from 'ui'
 import { Parallax  } from 'react-scroll-parallax'
 import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
+import { PayPalButtons } from '@paypal/react-paypal-js'
+import Axios from 'axios'
 
 export default function Contacto(){
     const [ open, setOpen ] = useState(false);
+    const [ isHidden, setIsHidden ] = useState(false)
     const validation = Yup.object().shape({
         nombre: Yup.string().required(),
         email: Yup.string().email().required(),
@@ -18,12 +21,7 @@ export default function Contacto(){
     const handleOpen = () => {
         setOpen(!open);
     };
-    function prueba(values){
-        console.log(values)
-        return(
-            <h1>Hola</h1>
-        )
-    }
+
     return(
         <section className="block contacto" id="contacto">
             <div className='textura'>
@@ -116,7 +114,7 @@ export default function Contacto(){
                                 }}
                                 validationSchema={validation}
                                 onSubmit={ async (values) =>{
-                                    return prueba(values)
+                                    console.log(values)
                                 }}
                             >
                                 {({isSubmitting, errors, touched, values}) =>(
@@ -176,9 +174,35 @@ export default function Contacto(){
                                                     </div>
                                                 </div>
                                                 <div className='button'>
-                                                    <button type='submit'>
+                                                    <button type='submit' className={isHidden ? "" : "hidden"}>
                                                         Inscribirme al Crash Course
                                                     </button>
+                                                    <div className={`paypal ${isHidden ? "hidden" : ""}`}>
+                                                        <PayPalButtons  createOrder={async () =>{
+                                                            try {
+                                                                const res = await Axios({
+                                                                    url: "/api/payments",
+                                                                    method: "POST",
+                                                                    headers:{
+                                                                        "Content-Type": "application/json"
+                                                                    }
+                                                                })
+                                                                return res.data.id
+                                                            } catch (error) {
+                                                                console.log(error)
+                                                            }
+                                                        }}
+                                                        onCancel={data =>{
+                                                            console.log("compra cancelada")
+                                                            setIsHidden(false) 
+                                                        }}
+                                                        onApprove={(data, actions) =>{
+                                                            console.log(data)
+                                                            setIsHidden(true)
+                                                            actions.order.capture()
+                                                        }}
+                                                        style={{ layout: "horizontal", color: 'gold'}} />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

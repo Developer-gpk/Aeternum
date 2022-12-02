@@ -4,8 +4,10 @@ import Title from "react-vanilla-tilt"
 import { Logo } from 'ui'
 import { buildImages } from '../../../libs/complementos'
 import { Parallax  } from 'react-scroll-parallax'
+import { useInView } from "react-hook-inview"
 
 export default function Aprender({ aprende }){
+    const [ref, inView] = useInView({ threshold: 0 });
     const options = {
         max: 30,
         scale: 1.0,
@@ -18,8 +20,12 @@ export default function Aprender({ aprende }){
             </Parallax>
             <div className="holder">
                 <div className="container-fluid">
-                    <div className="title">
-                        ¿De quién vas a aprender?
+                    <div className="title" ref={ref}>
+                        <p className={inView ? "isActive" : ""}>¿De&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>quién&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>vas&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>a&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>aprender?</p>
                     </div>
                     <div className='logo'>
                         <Image src={Logo} fill alt='Logo Aeternum' />

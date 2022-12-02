@@ -23,6 +23,19 @@
                         font-size: 38px;
                         color: $degrado2;
                         margin-bottom: 50px;
+                        p{
+                            // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                            //animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                            display: block;
+                            will-change: opacity, transform;
+                            opacity: 0;
+                            transform: translateY(100%) translateZ(0);
+                            animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                            &.isActive{
+                                transform: translateY(-10%) translateZ(0);
+                                animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                            }
+                        }
                     }
                     .precios{
                         display: flex;

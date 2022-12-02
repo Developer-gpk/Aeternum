@@ -2,9 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Textura1, Textura2, ImagenCover } from 'ui'
+import { useInView } from "react-hook-inview"
 import { buildImages } from '../../../libs/complementos'
 
 export default function Curso({ ventajas }){
+    const [ref, inView] = useInView({ threshold: 0 });
     return(
         <section className="block curso" id="curso">
             <div className='textura1'>
@@ -15,8 +17,17 @@ export default function Curso({ ventajas }){
             </div>
             <div className="holder">
                 <div className="container-fluid">
-                    <div className='title'>
-                        Este Curso de Criptomonedas y Blockchain es para ti si:
+                    <div className='title' ref={ref}>
+                        <p className={inView ? "isActive" : ""}>Este&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>Curso&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>de&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>Criptomonedas&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>y&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>Blockchain&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>es&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>para&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>ti&nbsp;</p>
+                        <p className={inView ? "isActive" : ""}>si:</p>    
                     </div>
                     <div className="flex-row">
                         {ventajas.map((ventaja, index) =>(

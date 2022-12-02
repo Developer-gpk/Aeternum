@@ -16,7 +16,7 @@ export default function Expertos({ title1, title2, title3 }){
                     <div className='flex-row'>
                         <div className='texto'>
                             <div className='texto1' ref={ref}>
-                                {inView ?  
+                                {inView ? 
                                     <MovingComponent
                                         type="slideInFromTop"
                                         duration="1000ms"
@@ -24,13 +24,14 @@ export default function Expertos({ title1, title2, title3 }){
                                         direction="normal"
                                         timing="ease-in-out"
                                         iteration="1"
-                                        fillMode="none">
+                                        fillMode="none"
+                                    >
                                         <BlockContent blocks={title1} />
                                     </MovingComponent>
-                                : (<BlockContent blocks={title1} />)}
+                                : ""}
                             </div>
                             <div className='texto2' ref={ref}>
-                                {inView ?  
+                                {inView ? 
                                     <MovingComponent
                                         type="slideInFromTop"
                                         duration="1000ms"
@@ -38,13 +39,14 @@ export default function Expertos({ title1, title2, title3 }){
                                         direction="normal"
                                         timing="ease-in-out"
                                         iteration="1"
-                                        fillMode="none">
+                                        fillMode="none"
+                                    >
                                         <BlockContent blocks={title2} />
                                     </MovingComponent>
-                                : (<BlockContent blocks={title2} />)}
+                                : ""}
                             </div>
                             <div className='texto1 espacio' ref={ref}>
-                                {inView ?  
+                                {inView ? 
                                     <MovingComponent
                                         type="slideInFromTop"
                                         duration="1000ms"
@@ -52,10 +54,11 @@ export default function Expertos({ title1, title2, title3 }){
                                         direction="normal"
                                         timing="ease-in-out"
                                         iteration="1"
-                                        fillMode="none">
+                                        fillMode="none"
+                                    >
                                         <BlockContent blocks={title3} />
                                     </MovingComponent>
-                                : (<BlockContent blocks={title3} />)}
+                                :""}
                             </div>
                             <Link href="/#contacto" legacyBehavior>
                                 <a>Has llegado con los expertos.</a>

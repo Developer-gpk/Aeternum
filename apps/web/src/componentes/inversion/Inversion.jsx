@@ -3,17 +3,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { SmartPhone2 } from 'ui'
 import { Parallax  } from 'react-scroll-parallax'
+import { useInView } from "react-hook-inview"
 import { separator } from '../../../libs/complementos'
 
 export default function Inversion({ titlePrecio, titlePrecioCrypto, precio, precioCrypto, adicionalPrecioCrypto}){
+    const [ref, inView] = useInView({ threshold: 0 });
     return(
         <section className='block inversion' id='inversion'>
             <div className="holder">
                 <div className="container-fluid">
                     <div className="flex-row">
                         <div className='inversion'>
-                            <div className='title'>
-                                Inversión
+                            <div className='title' ref={ref}>
+                                <p className={inView ? "isActive" : ""}>Inversión</p>
                             </div>
                             <div className='precios'>
                                 <div className="transferencia">
