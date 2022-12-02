@@ -45,6 +45,7 @@
                 font-size: 38px;
                 color: $degrado2;
                 text-align: center;
+                line-height: 49px;
             }
             .flex-row{
                 margin-top: 129px;
@@ -186,7 +187,7 @@
                                     border-bottom-right-radius: 0;
                                     transition: all 0.2s ease-in;
                                     .arrow{
-                                        transform: rotateZ(90deg);
+                                        transform: rotateZ(180deg);
                                         transition: all 0.2s ease-in;
                                         top: 38%;
 
@@ -196,7 +197,7 @@
                             .horarios-button{
                                 max-width: 524px;
                                 width: 100%;
-                                padding: 25px;
+                                padding: 25px 25px 74px 25px;
                                 border: 1px solid $degrado2;
                                 margin-top: -1px;
                                 background: #FFF;
