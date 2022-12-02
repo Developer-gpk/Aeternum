@@ -45,7 +45,7 @@ export default function Curso({ ventajas }){
                         Nuestro Crash Course te brindará los conocimientos, estrategias y la asesoría que requieres para iniciar tu experiencia dentro del mundo crypto.
                     </div>
                     <div className='button'>
-                        <Link href="/#contacto" legacyBehavior>
+                        <Link href="/#contacto" legacyBehavior scroll={false}>
                             <a>Inscríbete al Crash Course</a>
                         </Link>
                     </div>

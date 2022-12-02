@@ -17,7 +17,7 @@ $backgroundButton: #F78F1F;
 }
 html{
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 .outer-wrapper{
     overflow: hidden;

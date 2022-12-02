@@ -35,7 +35,7 @@ export default function Navbar(){
                         </Link>
                     </div>
                     <div className='button-navbar'>
-                        <Link href="/#contacto" legacyBehavior onClick={toTop}>
+                        <Link href="/#contacto" legacyBehavior scroll={false}>
                             <a>Inscríbete al Crash Course</a>
                         </Link>
                     </div>
