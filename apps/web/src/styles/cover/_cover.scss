@@ -27,9 +27,9 @@
         width: 100%;
         position: absolute !important;
         bottom: -104px;
-        right: 50%;
+        right: 10%;
         z-index: 2;
-        transform: translate(50%, 0%);
+        transform: translate(0%, 0%);
         transition: all 2s ease-in;
         transition-delay: 0.5s;
         img{
@@ -120,6 +120,9 @@
                 display: flex;
                 height: 28px;
                 overflow: hidden;
+                transform: translate3d(-20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                opacity: 0;
+                transition: all 2s ease-in;
                 p{
                     color: $texto1;
                     // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -159,6 +162,11 @@
                         animation-delay: 0.7s;
                     }
                 }
+                &.view{
+                    transform: translate3d(0em, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    opacity: 1;
+                    transform-style: preserve-3d;
+                }
             }
             .texto-2{
                 font-family: "Urbane-Bold";
@@ -168,7 +176,9 @@
                 display: flex;
                 height: 112px;
                 overflow: hidden;
-                flex-wrap: wrap;
+                transform: translate3d(-20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                opacity: 0;
+                transition: all 2s ease-in;
                 p{
                     color: $texto1;
                     // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -206,6 +216,11 @@
                         animation-delay: 1.4s;
                     }
                 }
+                &.view{
+                    transform: translate3d(0em, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    opacity: 1;
+                    transform-style: preserve-3d;
+                }
             }
             .text-3{
                 font-family: "Urbane-DemiBold";
@@ -215,7 +230,9 @@
                 display: flex;
                 height: 24px;
                 overflow: hidden;
-                flex-wrap: wrap;
+                transform: translate3d(-20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                opacity: 0;
+                transition: all 2s ease-in;
                 p{
                     color: $texto2;
                     // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -247,6 +264,11 @@
                         animation-delay: 1.9s;
                     }
                 }
+                &.view{
+                    transform: translate3d(0em, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    opacity: 1;
+                    transform-style: preserve-3d;
+                }
             }
             a{
                 max-width: 250px;
@@ -265,6 +287,9 @@
                 z-index: 0;
                 border-radius: 25px;
                 cursor: pointer;
+                transform: translate3d(-20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                opacity: 0;
+                transition: all 2s ease-in;
                 &::before {
                     content: "";
                     position: absolute;
@@ -302,6 +327,11 @@
                     top: -45%;
                     background: linear-gradient(90deg, #4e82e7 0%, #6039e4 48.26%, #771ee3 100%);;
                     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+                }
+                &.view{
+                    transform: translate3d(0em, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    opacity: 1;
+                    transform-style: preserve-3d;
                 }
             }
         }
