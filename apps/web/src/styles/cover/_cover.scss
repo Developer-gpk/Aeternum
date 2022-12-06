@@ -27,10 +27,10 @@
         width: 100%;
         position: absolute !important;
         bottom: -104px;
-        right: 10%;
+        right: 180px;
         z-index: 2;
-        transform: translate(0%, 0%);
-        transition: all 2s ease-in;
+        transform: translate(180px, 0%);
+        transition: all 1s ease-in;
         transition-delay: 0.5s;
         img{
             position: relative !important;
@@ -120,52 +120,18 @@
                 display: flex;
                 height: 28px;
                 overflow: hidden;
-                transform: translate3d(-20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                opacity: 0;
-                transition: all 2s ease-in;
-                p{
-                    color: $texto1;
+                span{
                     // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	                //animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                    display: block;
+                    display: inline-block;
                     will-change: opacity, transform;
                     opacity: 0;
                     transform: translateY(100%) translateZ(0);
                     animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
                     &.isActive{
                         transform: translateY(-10%) translateZ(0);
-                        animation: 1s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                        animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
                     }
-                    &:nth-child(1){
-                        animation-delay: 0.0s;
-
-                    }
-                    &:nth-child(2){
-                        animation-delay: 0.1s;
-                    }
-                    &:nth-child(3){
-                        animation-delay: 0.2s;
-                    }
-                    &:nth-child(4){
-                        animation-delay: 0.3s;
-                    }
-                    &:nth-child(5){
-                        animation-delay: 0.4s;
-                    }
-                    &:nth-child(6){
-                        animation-delay: 0.5s;
-                    }
-                    &:nth-child(7){
-                        animation-delay: 0.6s;
-                    }
-                    &:nth-child(8){
-                        animation-delay: 0.7s;
-                    }
-                }
-                &.view{
-                    transform: translate3d(0em, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    opacity: 1;
-                    transform-style: preserve-3d;
                 }
             }
             .texto-2{
@@ -173,53 +139,21 @@
                 font-size: 46px;
                 color: $texto1;
                 margin-bottom: 25px;
-                display: flex;
                 height: 112px;
                 overflow: hidden;
-                transform: translate3d(-20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                opacity: 0;
-                transition: all 2s ease-in;
                 p{
                     color: $texto1;
                     // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	                //animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                    display: block;
+                    display: inline-block;
                     will-change: opacity, transform;
                     opacity: 0;
                     transform: translateY(100%) translateZ(0);
                     animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
                     &.isActive{
                         transform: translateY(-10%) translateZ(0);
-                        animation: 1s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                        animation: 1s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0.5s forwards line_enter;
                     }
-                    &:nth-child(1){
-                        animation-delay: 0.8s;
-
-                    }
-                    &:nth-child(2){
-                        animation-delay: 0.9s;
-                    }
-                    &:nth-child(3){
-                        animation-delay: 1s;
-                    }
-                    &:nth-child(4){
-                        animation-delay: 1.1s;
-                    }
-                    &:nth-child(5){
-                        animation-delay: 1.2s;
-                    }
-                    &:nth-child(6){
-                        animation-delay: 1.3s;
-
-                    }
-                    &:nth-child(7){
-                        animation-delay: 1.4s;
-                    }
-                }
-                &.view{
-                    transform: translate3d(0em, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    opacity: 1;
-                    transform-style: preserve-3d;
                 }
             }
             .text-3{
@@ -232,7 +166,8 @@
                 overflow: hidden;
                 transform: translate3d(-20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
                 opacity: 0;
-                transition: all 2s ease-in;
+                transition: all 1s ease-in;
+                transition-delay: 1s;
                 p{
                     color: $texto2;
                     // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -244,24 +179,7 @@
                     animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
                     &.isActive{
                         transform: translateY(-10%) translateZ(0);
-                        animation: 1s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
-                    }
-                    &:nth-child(1){
-                        animation-delay: 1.5s;
-
-                    }
-                    &:nth-child(2){
-                        animation-delay: 1.6s;
-                    }
-                    &:nth-child(3){
-                        animation-delay: 1.7s;
-
-                    }
-                    &:nth-child(4){
-                        animation-delay: 1.8s;
-                    }
-                    &:nth-child(5){
-                        animation-delay: 1.9s;
+                        animation: 1s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0.2s forwards line_enter;
                     }
                 }
                 &.view{
@@ -289,7 +207,8 @@
                 cursor: pointer;
                 transform: translate3d(-20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
                 opacity: 0;
-                transition: all 2s ease-in;
+                transition: all 1s ease-in;
+                transition-delay: 1s;
                 &::before {
                     content: "";
                     position: absolute;

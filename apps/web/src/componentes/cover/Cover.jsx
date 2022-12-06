@@ -14,26 +14,18 @@ export default function Cover({ title1, title2, title3}){
             </div>
             <div className='holder'>
                 <div className='container-fluid' ref={ref}>
-                    <div className={`texto-1 ${inView ? "view" : ""}`}>
-                        Comienza tu experiencia en el mundo de las
+                    <div className={`texto-1`}>
+                        <span className={inView ? "isActive" : ""}>Comienza tu experiencia en el mundo de las</span>
                     </div>
-                    <div className={`texto-2 ${inView ? "view" : ""}`}>
-                        Criptomonedas y Blockchain con nuestro Crash Course.
+                    <div className={`texto-2`}>
+                        <p className={inView ? "isActive" : ""}>Criptomonedas y Blockchain con nuestro Crash Course.</p>
                     </div>
                     <div className={`text-3 ${inView ? "view" : ""}`}>
                         Tu llave al mundo crypto.
                     </div>
-                    <Link className={`${inView ? "view" : ""}`} to="contacto" spy={true} smooth={true} duration={1000} delay={0}>
+                    <Link className={inView ? "view" : ""} to="contacto" spy={true} smooth={true} duration={1000} delay={0}>
                         Inscríbete al Crash Course
                     </Link>
-                    <div className='text-cover-1'>
-                        <div className={`cover-1 ${inView ? "view" : ""}`}></div>
-                    </div>
-                    <div className='text-cover-2'>
-                        <div className={`cover-2 ${inView ? "view" : ""}`}></div>
-                    </div>
-                    <div className={`text-cover-3 ${inView ? "view" : ""}`}></div>
-                    
                 </div>
             </div>
             <div className='textura2'>
