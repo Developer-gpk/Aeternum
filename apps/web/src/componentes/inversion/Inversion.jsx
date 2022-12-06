@@ -37,7 +37,7 @@ export default function Inversion({ titlePrecio, titlePrecioCrypto, precio, prec
                                 </Link>
                             </div>
                         </div>
-                        <div className='imagen'>
+                        <div className={`imagen ${inView ? "View" : ""}`}>
                             <div className="background">
                                 <Parallax speed={-5}>
                                     <div className='circulo1'></div>

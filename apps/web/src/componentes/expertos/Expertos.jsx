@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { SmartPhone, Coin1, Coin2, Coin3, Coin4, Coin5, Coin6, AeternumIcon } from 'ui'
@@ -6,6 +6,7 @@ import { Parallax  } from 'react-scroll-parallax'
 import BlockContent from "@sanity/block-content-to-react"
 import { MovingComponent } from 'react-moving-text'
 import { useInView } from "react-hook-inview"
+
 
 export default function Expertos({ title1, title2, title3 }){
     const [ref, inView] = useInView({ threshold: 0 });
@@ -21,14 +22,14 @@ export default function Expertos({ title1, title2, title3 }){
                                         type="slideInFromTop"
                                         duration="1000ms"
                                         delay="0s"
-                                        direction="normal"
+                                        direction="alternate"
                                         timing="ease-in-out"
                                         iteration="1"
-                                        fillMode="none"
+                                        fillMode="forwards"
                                     >
                                         <BlockContent blocks={title1} />
                                     </MovingComponent>
-                                : ""}
+                                : <></>}
                             </div>
                             <div className='texto2' ref={ref}>
                                 {inView ? 
@@ -36,14 +37,14 @@ export default function Expertos({ title1, title2, title3 }){
                                         type="slideInFromTop"
                                         duration="1000ms"
                                         delay="0s"
-                                        direction="normal"
+                                        direction="alternate"
                                         timing="ease-in-out"
                                         iteration="1"
-                                        fillMode="none"
+                                        fillMode="forwards"
                                     >
                                         <BlockContent blocks={title2} />
                                     </MovingComponent>
-                                : ""}
+                                : <></>}
                             </div>
                             <div className='texto1 espacio' ref={ref}>
                                 {inView ? 
@@ -51,20 +52,20 @@ export default function Expertos({ title1, title2, title3 }){
                                         type="slideInFromTop"
                                         duration="1000ms"
                                         delay="0s"
-                                        direction="normal"
+                                        direction="alternate"
                                         timing="ease-in-out"
                                         iteration="1"
-                                        fillMode="none"
+                                        fillMode="forwards"
                                     >
                                         <BlockContent blocks={title3} />
                                     </MovingComponent>
-                                :""}
+                                : <></>}
                             </div>
                             <Link href="/#contacto" legacyBehavior>
                                 <a>Has llegado con los expertos.</a>
                             </Link>
                         </div>
-                        <div className='imagenes'>
+                        <div className={`imagenes ${inView ? "inView" : ""}`}>
                             <div className='background'>
                                 <Parallax speed={3}>
                                     <div className='coin1'>
@@ -98,7 +99,7 @@ export default function Expertos({ title1, title2, title3 }){
                                 </Parallax>
                                 <div className='icono'>
                                     <Parallax speed={3}>
-                                            <Image src={AeternumIcon} fill quality={100}/>
+                                        <Image src={AeternumIcon} fill quality={100}/>
                                     </Parallax>
                                 </div>
                             </div>

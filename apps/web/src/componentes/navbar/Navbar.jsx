@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { useRouter } from 'next/router'
 import { AeternumAcedemyLogo } from 'ui'
 
@@ -35,8 +36,8 @@ export default function Navbar(){
                         </Link>
                     </div>
                     <div className='button-navbar'>
-                        <Link href="/#contacto" legacyBehavior scroll={false}>
-                            <a>Inscríbete al Crash Course</a>
+                        <Link to="contacto" spy={true} smooth={true} duration={1000} delay={0} >
+                            Inscríbete al Crash Course
                         </Link>
                     </div>
                 </div>

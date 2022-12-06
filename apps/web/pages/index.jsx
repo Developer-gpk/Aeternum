@@ -14,7 +14,6 @@ import Contacto from '../src/componentes/contacto/Contacto'
 import Texto from '../src/componentes/texto/Texto'
 
 function Index({ home }){
-    console.log(home)
     return(
         <Template title={home.title} description={home.metadescription} keywords={home.keywords} >
             <Cover />

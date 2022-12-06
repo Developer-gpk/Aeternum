@@ -21,10 +21,12 @@
     "react-dom": "^18.2.0",
     "react-hook-inview": "^4.5.0",
     "react-moving-text": "^0.0.7",
+    "react-scroll": "^1.8.8",
     "react-scroll-parallax": "^3.3.2",
     "react-vanilla-tilt": "^1.0.0",
     "sass": "^1.56.1",
     "swiper": "^8.4.5",
+    "textify.js": "^1.2.2",
     "ui": "*",
     "yup": "^0.32.11"
   },
