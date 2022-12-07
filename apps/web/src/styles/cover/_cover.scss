@@ -49,69 +49,6 @@
             width: 100%;
             padding: 0 15px;
             position: relative;
-            .prueba-cover{
-                position: absolute;
-                top: 0.075em;
-                bottom: -0.075em;
-                left: 0;
-                right: 0;
-                
-            }
-            .text-cover-1{
-                overflow: hidden;
-                height: 37px;
-                position: absolute;
-                width: 100%;
-                top: 0;
-                .cover-1{
-                    background: #05003D;
-                    height: 100%;
-                    transform: translate(0%, 0px);
-                    transition: all 2s ease-in;
-                    transition-delay: 0.5s;
-                    &.view{
-                        transform: translate3d(100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                        transform-style: preserve-3d;
-                    }
-                }
-            }
-            .text-cover-2{
-                overflow: hidden;
-                height: 137px;
-                position: absolute;
-                width: 100%;
-                top: 37px;
-                .cover-2{
-                    background: #05003D;
-                    height: 100%;
-                    transform: translate(0%, 0px);
-                    transition: all 2s ease-in;
-                    transition-delay: 0.5s;
-                    &.view{
-                        transform: translate3d(100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                        transform-style: preserve-3d;
-                    }
-                }
-            }
-
-            .text-cover-3{
-                overflow: hidden;
-                height: 125px;
-                position: absolute;
-                width: 100%;
-                top: 174px;
-                background: #05003D;
-                height: 100%;
-                transform: translate(0%, 0px);
-                transition: all 2s ease-in;
-                transition-delay: 0.5s;
-                &.view{
-                    transform: translate3d(100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    transform-style: preserve-3d;
-                }
-                .cover-3{
-                }
-            }
             .texto-1{
                 font-family: "Urbane-Light";
                 font-size: 24px;
@@ -130,7 +67,7 @@
                     animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
                     &.isActive{
                         transform: translateY(-10%) translateZ(0);
-                        animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                        animation: 1s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
                     }
                 }
             }
@@ -164,10 +101,6 @@
                 display: flex;
                 height: 24px;
                 overflow: hidden;
-                transform: translate3d(-20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                opacity: 0;
-                transition: all 1s ease-in;
-                transition-delay: 1s;
                 p{
                     color: $texto2;
                     // -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -179,13 +112,8 @@
                     animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
                     &.isActive{
                         transform: translateY(-10%) translateZ(0);
-                        animation: 1s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0.2s forwards line_enter;
+                        animation: 1s cubic-bezier(0.430, 0.195, 0.020, 1.000) 1s forwards line_enter;
                     }
-                }
-                &.view{
-                    transform: translate3d(0em, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    opacity: 1;
-                    transform-style: preserve-3d;
                 }
             }
             a{
@@ -205,7 +133,7 @@
                 z-index: 0;
                 border-radius: 25px;
                 cursor: pointer;
-                transform: translate3d(-20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform: translate3d(0px, 15px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
                 opacity: 0;
                 transition: all 1s ease-in;
                 transition-delay: 1s;

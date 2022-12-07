@@ -6,7 +6,7 @@ import { useInView } from "react-hook-inview"
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default function Cover({ title1, title2, title3}){
-    const [ref, inView] = useInView({ threshold: 1 });
+    const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
     return(
         <section className='block cover' id='cover'>
             <div className='textura1'>
@@ -14,14 +14,14 @@ export default function Cover({ title1, title2, title3}){
             </div>
             <div className='holder'>
                 <div className='container-fluid' ref={ref}>
-                    <div className={`texto-1`}>
+                    <div className="texto-1">
                         <span className={inView ? "isActive" : ""}>Comienza tu experiencia en el mundo de las</span>
                     </div>
-                    <div className={`texto-2`}>
+                    <div className="texto-2">
                         <p className={inView ? "isActive" : ""}>Criptomonedas y Blockchain con nuestro Crash Course.</p>
                     </div>
-                    <div className={`text-3 ${inView ? "view" : ""}`}>
-                        Tu llave al mundo crypto.
+                    <div className="text-3">
+                        <p className={inView ? "isActive" : ""}>Tu llave al mundo crypto.</p>
                     </div>
                     <Link className={inView ? "view" : ""} to="contacto" spy={true} smooth={true} duration={1000} delay={0}>
                         Inscríbete al Crash Course

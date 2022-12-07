@@ -9,7 +9,7 @@ import { useInView } from "react-hook-inview"
 
 
 export default function Expertos({ title1, title2, title3 }){
-    const [ref, inView] = useInView({ threshold: 0 });
+    const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
     return(
         <section className='block expertos' id='expertos'>
             <div className='holder'>
@@ -17,7 +17,7 @@ export default function Expertos({ title1, title2, title3 }){
                     <div className='flex-row'>
                         <div className='texto'>
                             <div className='texto1' ref={ref}>
-                                {inView ? 
+                                {inView ?
                                     <MovingComponent
                                         type="slideInFromTop"
                                         duration="1000ms"
@@ -29,14 +29,14 @@ export default function Expertos({ title1, title2, title3 }){
                                     >
                                         <BlockContent blocks={title1} />
                                     </MovingComponent>
-                                : <></>}
+                                : <div></div>}
                             </div>
                             <div className='texto2' ref={ref}>
-                                {inView ? 
+                                {inView ?
                                     <MovingComponent
                                         type="slideInFromTop"
                                         duration="1000ms"
-                                        delay="0s"
+                                        delay="0.5s"
                                         direction="alternate"
                                         timing="ease-in-out"
                                         iteration="1"
@@ -44,14 +44,14 @@ export default function Expertos({ title1, title2, title3 }){
                                     >
                                         <BlockContent blocks={title2} />
                                     </MovingComponent>
-                                : <></>}
+                                : <div></div>}
                             </div>
                             <div className='texto1 espacio' ref={ref}>
-                                {inView ? 
+                                {inView ?
                                     <MovingComponent
                                         type="slideInFromTop"
                                         duration="1000ms"
-                                        delay="0s"
+                                        delay="1s"
                                         direction="alternate"
                                         timing="ease-in-out"
                                         iteration="1"
@@ -59,7 +59,7 @@ export default function Expertos({ title1, title2, title3 }){
                                     >
                                         <BlockContent blocks={title3} />
                                     </MovingComponent>
-                                : <></>}
+                                : <div></div>}
                             </div>
                             <Link href="/#contacto" legacyBehavior>
                                 <a>Has llegado con los expertos.</a>
