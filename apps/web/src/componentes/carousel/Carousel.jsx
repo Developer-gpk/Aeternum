@@ -24,6 +24,7 @@ export default function Carousel({opiniones}){
                 }}
                 modules={[EffectCreative, Navigation]}
                 className="carousel"
+                speed={1500}
             >
                 {opiniones?.map((opinion, index) =>(
                     <SwiperSlide key={index}>

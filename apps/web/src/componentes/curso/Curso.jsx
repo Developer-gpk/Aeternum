@@ -45,8 +45,8 @@ export default function Curso({ aprende }){
                     </div>
                     <div className='flex-row'>
                         {aprende.map((apre, index) =>(
-                            <Title className="tilt" options={options}>
-                                <div className="tarjeta" key={index}>
+                            <Title className="tilt" options={options} key={index}>
+                                <div className="tarjeta" >
                                     <div className='icono'>
                                         <Image src={buildImages(apre?.imagen?.asset).url()} fill alt={`Icono-${index+1}`} />
                                     </div>

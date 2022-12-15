@@ -10,7 +10,7 @@ export default function Cover({ title1, title2, title3}){
     return(
         <section className='block cover' id='cover'>
             <div className='textura1'>
-                <Image src={Textura1} fill alt='Textura 1 cover' />
+                <Image src={Textura1} fill alt='Textura 1 cover' priority quality={100} />
             </div>
             <div className='holder'>
                 <div className='container-fluid' ref={ref}>
@@ -21,7 +21,7 @@ export default function Cover({ title1, title2, title3}){
                         <p className={inView ? "isActive" : ""}>Criptomonedas y Blockchain con nuestro Crash Course.</p>
                     </div>
                     <div className="text-3">
-                        <p className={inView ? "isActive" : ""}>Tu llave al mundo crypto.</p>
+                        <p className={inView ? "isActive" : ""}>TU LLAVE AL MUNDO CRIPTO.</p>
                     </div>
                     <Link className={inView ? "view" : ""} to="contacto" spy={true} smooth={true} duration={1000} delay={0}>
                         Inscríbete al Crash Course
@@ -29,11 +29,11 @@ export default function Cover({ title1, title2, title3}){
                 </div>
             </div>
             <div className='textura2'>
-                <Image src={Textura2} fill alt='Textura 2 cover' />
+                <Image src={Textura2} fill alt='Textura 2 cover' priority quality={100} />
             </div>
             <div className={`cover ${inView ? "view" : ""}`}>
                 <Parallax speed={-5}>
-                    <Image src={ImagenCover} fill alt='Imagen cover' priority />
+                    <Image src={ImagenCover} fill alt='Imagen cover' priority quality={100} />
                 </Parallax>
             </div>
         </section>

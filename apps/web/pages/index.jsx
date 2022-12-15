@@ -1,4 +1,5 @@
 import React from 'react'
+import { Element } from 'react-scroll'
 import Client from '../libs/Client'
 import Template from '../template/Template'
 import Cover from '../src/componentes/cover/Cover'
@@ -26,7 +27,9 @@ function Index({ home }){
             <Aprender ventajas={home.ventajas} />
             <Pregunta />
             <Carousel opiniones={home.opiniones} />
-            <Contacto months={home.Months} />
+            <Element name='contact'>
+                <Contacto months={home.Months} />
+            </Element>
             <Texto />
         </Template>
     )

@@ -12,7 +12,7 @@ export default function Instructor({ instructor }){
             <div className="holder">
                 <div className="container-fluid">
                     <div className='title'>
-                        Criptocontador
+                        Tu instructor
                     </div>
                     <div className="flex-row">
                         <div className='imagen'>

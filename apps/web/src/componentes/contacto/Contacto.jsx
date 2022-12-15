@@ -27,7 +27,7 @@ export default function Contacto({ months }){
     const handleOpen = () => {
         setOpen(!open);
     };
-    function _renderStepContent(step, errors, touched, months){
+    function _renderStepContent(step, errors, touched, months, values){
         switch (step) {
             case 0:
                 return(
@@ -71,31 +71,41 @@ export default function Contacto({ months }){
             case 1:
                 return(
                     <>
-                        <div className='paypal'>
-                            <PayPalButtons  createOrder={async () =>{
-                                try {
-                                    const res = await Axios({
-                                        url: "/api/payments",
-                                        method: "POST",
-                                        headers:{
-                                            "Content-Type": "application/json"
+                        <div className='pagos'>
+                            <div className='pagos-subtitle'>
+                                ¡Bienvenido, “{values.nombre}”!
+                            </div>
+                            <div className='pagos-title'>
+                                Selecciona tu método de pago:
+                            </div>
+                            <div className='pagos-metodos'>
+                                <div className='paypal'>
+                                    <PayPalButtons  createOrder={async () =>{
+                                        try {
+                                            const res = await Axios({
+                                                url: "/api/payments",
+                                                method: "POST",
+                                                headers:{
+                                                    "Content-Type": "application/json"
+                                                }
+                                            })
+                                            return res.data.id
+                                        } catch (error) {
+                                            console.log(error)
                                         }
-                                    })
-                                    return res.data.id
-                                } catch (error) {
-                                    console.log(error)
-                                }
-                            }}
-                            onCancel={data =>{
-                                console.log("compra cancelada")
-                                setIsHidden(true)
-                            }}
-                            onApprove={(data, actions) =>{
-                                console.log(data)
-                                setIsHidden(false)
-                                actions.order.capture()
-                            }}
-                            style={{ layout: "horizontal", color: 'gold'}} />
+                                    }}
+                                    onCancel={data =>{
+                                        console.log("compra cancelada")
+                                        setIsHidden(true)
+                                    }}
+                                    onApprove={(data, actions) =>{
+                                        console.log(data)
+                                        setIsHidden(false)
+                                        actions.order.capture()
+                                    }}
+                                    style={{ layout: "horizontal", color: 'gold'}} />
+                                </div>
+                            </div>
                         </div>
                     </>
                 )
@@ -134,7 +144,7 @@ export default function Contacto({ months }){
                         ÚNETE AHORA
                     </div>
                     <div className='title'>
-                        Contamos con disponibilidad de horarios
+                        Contamos con fechas disponibles
                     </div>
                     <div className='text-schedule'>
                         <div className='icon-schedule'>
@@ -156,7 +166,7 @@ export default function Contacto({ months }){
                         >
                             {({isSubmitting, errors, touched, values, isValid }) =>(
                                 <Form>
-                                    {_renderStepContent(activeStep, errors, touched, months)}
+                                    {_renderStepContent(activeStep, errors, touched, months, values)}
                                     <div className='buttons'>
                                             <div className='button'>
                                         {activeStep !== 0 && (

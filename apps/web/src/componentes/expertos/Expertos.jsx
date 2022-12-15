@@ -71,42 +71,42 @@ export default function Expertos({ title1, title2, title3 }){
                             <div className='background'>
                                 <Parallax speed={3}>
                                     <div className='coin1'>
-                                        <Image src={Coin1} fill quality={100}/>
+                                        <Image src={Coin1} fill quality={100} alt="Criptomoneda"/>
                                     </div>
                                 </Parallax>
                                 <Parallax speed={2}>
                                     <div className='coin2'>
-                                        <Image src={Coin2} fill quality={100}/>
+                                        <Image src={Coin2} fill quality={100} alt="Criptomoneda"/>
                                     </div>
                                 </Parallax>
                                 <Parallax speed={4}>
                                     <div className='coin3'>
-                                        <Image src={Coin3} fill quality={100}/>
+                                        <Image src={Coin3} fill quality={100} alt="Criptomoneda"/>
                                     </div>
                                 </Parallax>
                                 <Parallax speed={5}>
                                     <div className='coin4'>
-                                        <Image src={Coin4} fill quality={100}/>
+                                        <Image src={Coin4} fill quality={100} alt="Criptomoneda"/>
                                     </div>
                                 </Parallax>
                                 <Parallax speed={5}>
                                     <div className='coin5'>
-                                        <Image src={Coin5} fill quality={100}/>
+                                        <Image src={Coin5} fill quality={100} alt="Criptomoneda"/>
                                     </div>
                                 </Parallax>
                                 <Parallax speed={3}>
                                     <div className='coin6'>
-                                        <Image src={Coin6} fill quality={100}/>
+                                        <Image src={Coin6} fill quality={100} alt="Criptomoneda"/>
                                     </div>
                                 </Parallax>
                                 <div className='icono'>
                                     <Parallax speed={3}>
-                                        <Image src={AeternumIcon} fill quality={100}/>
+                                        <Image src={AeternumIcon} fill quality={100} alt="Aeternum"/>
                                     </Parallax>
                                 </div>
                             </div>
                             <div className='imagen'>
-                                <Image src={SmartPhone} fill quality={100}/>
+                                <Image src={SmartPhone} fill quality={100} alt="smartphone" />
                             </div>
                         </div>
                     </div>

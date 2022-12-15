@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import { useRouter } from 'next/router'
 import { AeternumAcedemyLogo } from 'ui'
 
 export default function Navbar(){
     const [isActive, setIsActive] = useState(false)
     const router = useRouter()
-    const toTop = () => {
-        window.scroll({
-          top: 0,
-          left: 0,
-          behavior: "smooth"
-        })
+    const onClickDown = () =>{
+        scroll.scrollTo('contacto', scrollType)
     }
+    const scrollType = {
+        duration: 500,
+        delay: 50,
+        smooth: true, // linear "easeInQuint" "easeOutCubic" https://easings.net/es
+        offset: -10,
+    };
     const chageBackground = () =>{
         if(window.scrollY >= 80){
             setIsActive(true)
@@ -32,11 +34,11 @@ export default function Navbar(){
                 <div className="container-fluid">
                     <div className="logo">
                         <Link href="/" >
-                            <Image src={AeternumAcedemyLogo} fill alt='Logo Aeternum' />
+                            <Image src={AeternumAcedemyLogo} fill alt='Logo Aeternum' quality={100} />
                         </Link>
                     </div>
                     <div className='button-navbar'>
-                        <Link to="contacto" spy={true} smooth={true} duration={1000} delay={0} >
+                        <Link to="contact" >
                             Inscríbete al Crash Course
                         </Link>
                     </div>

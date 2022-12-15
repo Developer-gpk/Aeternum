@@ -37,7 +37,6 @@
                         overflow: hidden;
                         z-index: 1;
                         border-radius: 25px;
-                        
                         &::before {
                             content: "";
                             position: absolute;
@@ -113,7 +112,6 @@
                         overflow: hidden;
                         z-index: 1;
                         border-radius: 25px;
-                        
                         &::before {
                             content: "";
                             position: absolute;
@@ -174,6 +172,10 @@
                 }
             }
             .button-navbar{
+                display: block;
+                position: absolute;
+                top: 29px;
+                right: 71px;
                 visibility: hidden;
                 opacity: 0;
                 transition: visibility 2s, opacity 0.5s ease-in-out;

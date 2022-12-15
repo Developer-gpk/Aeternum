@@ -1,6 +1,6 @@
 .block.temario{
     position: relative;
-    padding: 139px 0 200px 0;
+    padding: 139px 0 150px 0;
     background: $texto1;
     .textura{
         width: 100%;
@@ -105,10 +105,11 @@
             }
             .flex-row{
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
                 .tarjeta{
                     max-width: 32%;
                     width: 100%;
+                    margin: 0 45px;
                     .imagen{
                         width: 100%;
                         overflow: hidden;
@@ -243,6 +244,7 @@
                         max-width: none;
                         width: 100%;
                         padding: 0 45px;
+                        margin: 0;
                         .imagen{
                             display: none;
                         }

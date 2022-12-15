@@ -42,7 +42,7 @@ html{
             padding: 11px 36px 11px 36px;
             text-decoration: none;
             font-family: "Urbane-Medium";
-            font-size: 14px;
+            font-size: 16px;
             color: $texto1;
             display: block;
             transition: all 0.2s ease-in;
@@ -67,13 +67,13 @@ html{
 }
 @keyframes an {
     from {
-      opacity: 0;
-      transform: perspective(500px) translate3d(-35px, -40px, -150px)
+        opacity: 0;
+        transform: perspective(500px) translate3d(-35px, -40px, -150px)
         rotate3d(1, -1, 0, 35deg);
     }
     to {
-      opacity: 1;
-      transform: perspective(500px) translate3d(0, 0, 0);
+        opacity: 1;
+        transform: perspective(500px) translate3d(0, 0, 0);
     }
 }
 @keyframes tilt-in-bottom-2 {
@@ -85,7 +85,7 @@ html{
         transform: rotateY(0deg) translateY(0) skewY(0deg);
         opacity: 1;
     }
-} 
+}
 @keyframes slide-in-bottom {
     0% {
         transform: translateY(1000px);
@@ -96,7 +96,16 @@ html{
         opacity: 1;
     }
 }
-  
+@keyframes fade-in-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 @font-face {
     font-family: "Urbane-Bold";
     src: url("../fonts/Urbane-Bold.ttf");
