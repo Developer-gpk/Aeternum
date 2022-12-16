@@ -4,10 +4,22 @@ import { Textura3 } from 'ui'
 import { buildImages } from '../../../libs/complementos'
 import { useInView } from "react-hook-inview"
 import AnimatedText from "react-animated-text-content"
+import { keyframes } from "@emotion/react"
+import { Reveal } from "react-awesome-reveal"
 
 export default function Temario({ dias }){
     const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
     const [title, inViewTitle] = useInView({ threshold: 0, unobserveOnEnter: true });
+    const customAnimation = keyframes`
+        0% {
+            transform: rotateY(-30deg) translateY(300px) skewY(30deg);
+            opacity: 0;
+        }
+        100% {
+            transform: rotateY(0deg) translateY(0) skewY(0deg);
+            opacity: 1;
+        }
+    `;
     return(
         <section className='block temario' id='temario'>
             <div className='textura'>
@@ -35,7 +47,9 @@ export default function Temario({ dias }){
                         {dias?.map((dia, index) =>(
                             <div className='tarjeta' key={index}>
                                 <div className='imagen' ref={ref}>
-                                    <Image src={buildImages(dia?.imagen?.asset).url()} fill alt={`Dia ${index+1}`} className={`${inView ? "prueba" : ""}`} data-delay={`${index * 1}`}  />
+                                    <Reveal keyframes={inView ? customAnimation : ""}>
+                                        <Image src={buildImages(dia?.imagen?.asset).url()} fill alt={`Dia ${index+1}`} className={`${inView ? "prueba" : ""}`} data-delay={`${index * 1}`}  />
+                                    </Reveal>
                                 </div>
                                 <div className='dia'>
                                     <AnimatedText

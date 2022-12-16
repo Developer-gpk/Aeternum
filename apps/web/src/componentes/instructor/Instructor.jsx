@@ -4,9 +4,21 @@ import { Textura4 } from 'ui'
 import { buildImages } from '../../../libs/complementos'
 import AnimatedText from "react-animated-text-content"
 import { useInView } from "react-hook-inview"
+import { keyframes } from "@emotion/react"
+import { Reveal } from "react-awesome-reveal"
 
 export default function Instructor({ instructor }){
     const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
+    const customAnimation = keyframes`
+        0% {
+            transform: rotateY(-30deg) translateY(300px) skewY(30deg);
+            opacity: 0;
+        }
+        100% {
+            transform: rotateY(0deg) translateY(0) skewY(0deg);
+            opacity: 1;
+        }
+    `;
     return(
         <section className="block instructor" id="instructor">
             <div className="textura">
@@ -29,7 +41,9 @@ export default function Instructor({ instructor }){
                     </div>
                     <div className="flex-row">
                         <div className='imagen' ref={ref}>
-                            <Image src={buildImages(instructor?.imagen?.asset).url()} fill alt={instructor.nombre} className={inView ? "view" : ""} />
+                            <Reveal keyframes={inView ? customAnimation : ""}>
+                                <Image src={buildImages(instructor?.imagen?.asset).url()} fill alt={instructor.nombre}  />
+                            </Reveal>
                         </div>
                         <div className='content'>
                             <div className='name' ref={ref}>

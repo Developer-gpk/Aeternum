@@ -4,9 +4,21 @@ import { Textura1, Textura2, ImagenCover } from 'ui'
 import { Parallax  } from 'react-scroll-parallax'
 import { useInView } from "react-hook-inview"
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { keyframes } from "@emotion/react";
+import { Reveal } from "react-awesome-reveal";
 
 export default function Cover({ title1, title2, title3}){
     const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
+    const customAnimation = keyframes`
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    `;
     return(
         <section className='block cover' id='cover'>
             <div className='textura1'>
@@ -31,9 +43,11 @@ export default function Cover({ title1, title2, title3}){
             <div className='textura2'>
                 <Image src={Textura2} fill alt='Textura 2 cover' priority quality={100} />
             </div>
-            <div className={`cover ${inView ? "view" : ""}`}>
+            <div className={`cover`}>
                 <Parallax speed={-5}>
-                    <Image src={ImagenCover} fill alt='Imagen cover' priority quality={100} />
+                    <Reveal keyframes={inView ? customAnimation : ""}>
+                        <Image src={ImagenCover} fill alt='Imagen cover' priority quality={100} />
+                    </Reveal>
                 </Parallax>
             </div>
         </section>
