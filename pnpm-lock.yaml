@@ -33,6 +33,7 @@ importers:
       react-dom: 18.2.0
       react-hook-inview: ^4.5.0
       react-moving-text: ^0.0.7
+      react-reveal: ^1.2.2
       react-scroll: ^1.8.8
       react-scroll-parallax: ^3.3.2
       react-vanilla-tilt: ^1.0.0
@@ -56,6 +57,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       react-hook-inview: 4.5.0_biqbaboplfbrettd7655fr4n2y
       react-moving-text: 0.0.7
+      react-reveal: 1.2.2_react@18.2.0
       react-scroll: 1.8.8_biqbaboplfbrettd7655fr4n2y
       react-scroll-parallax: 3.3.2_biqbaboplfbrettd7655fr4n2y
       react-vanilla-tilt: 1.0.0
@@ -2895,6 +2897,15 @@ packages:
     resolution: {integrity: sha512-WA72if8QS2/QVOmZ2mDnWu1UFkMqt7Y1TFLfKT3MDRwPbcpz2F7WAyGi349anuKth0bQKg0CQddlQLQQiII8zQ==}
     peerDependencies:
       styled-components: '>= 4'
+    dev: false
+
+  /react-reveal/1.2.2_react@18.2.0:
+    resolution: {integrity: sha512-JCv3fAoU6Z+Lcd8U48bwzm4pMZ79qsedSXYwpwt6lJNtj/v5nKJYZZbw3yhaQPPgYePo3Y0NOCoYOq/jcsisuw==}
+    peerDependencies:
+      react: ^15.3.0 || ^16.0.0
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
     dev: false
 
   /react-scroll-parallax/3.3.2_biqbaboplfbrettd7655fr4n2y:

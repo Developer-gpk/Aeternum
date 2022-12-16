@@ -49,6 +49,12 @@
                                 font-size: 36px;
                                 color: $degrado2;
                                 margin-bottom: 28px;
+                                transform: translateY(100%) translateZ(0);
+                                animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                                &.isActive{
+                                    transform: translateY(-10%) translateZ(0);
+                                    animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                                }
                                 strong{
                                     font-family: "Urbane-Bold";
                                     font-size: 20px;
@@ -62,6 +68,12 @@
                                 font-family: "Urbane-DemiBold";
                                 font-size: 18px;
                                 color: $background;
+                                transform: translateY(100%) translateZ(0);
+                                animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                                &.isActive{
+                                    transform: translateY(-10%) translateZ(0);
+                                    animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                                }
                             }
                         }
                         .crypto{
@@ -72,6 +84,12 @@
                                 font-size: 36px;
                                 color: $degrado2;
                                 margin-bottom: 28px;
+                                transform: translateY(100%) translateZ(0);
+                                animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                                &.isActive{
+                                    transform: translateY(-10%) translateZ(0);
+                                    animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                                }
                                 strong{
                                     font-family: "Urbane-Bold";
                                     font-size: 20px;
@@ -86,11 +104,23 @@
                                 font-size: 18px;
                                 color: $background;
                                 margin-bottom: 15px;
+                                transform: translateY(100%) translateZ(0);
+                                animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                                &.isActive{
+                                    transform: translateY(-10%) translateZ(0);
+                                    animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                                }
                             }
                             .subtitulo{
                                 font-family: "Urbane-Light";
                                 font-size: 16px;
                                 color: $texto3;
+                                transform: translateY(100%) translateZ(0);
+                                animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                                &.isActive{
+                                    transform: translateY(-10%) translateZ(0);
+                                    animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                                }
                             }
                         }
                     }
@@ -101,6 +131,12 @@
                         font-size: 13px;
                         color: $texto3;
                         margin-bottom: 50px;
+                        transform: translateY(100%) translateZ(0);
+                        animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                        &.isActive{
+                            transform: translateY(-10%) translateZ(0);
+                            animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                        }
                     }
                     .button{
                         text-align: center;
@@ -314,7 +350,6 @@
                                 overflow: hidden;
                                 z-index: 1;
                                 border-radius: 25px;
-                                
                                 &::before {
                                     content: "";
                                     position: absolute;

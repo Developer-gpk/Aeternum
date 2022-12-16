@@ -9,7 +9,8 @@ import Link from 'next/link'
 import AnimatedText from "react-animated-text-content"
 
 export default function Aprender({ ventajas }){
-    const [ref, inView] = useInView({ threshold: 0 });
+    const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
+    const [ text, inText] = useInView({ threshold: 0, unobserveOnEnter: true });
     const options = {
         max: 30,
         scale: 1.0,
@@ -37,18 +38,38 @@ export default function Aprender({ ventajas }){
                     </div>
                     <div className="flex-row">
                         {ventajas.map((ventaja, index) =>(
-                            <div className='ventaja' key={index}>
+                            <div className='ventaja' key={index} ref={text}>
                                 <div className='icon'>
-                                    <Image src={buildImages(ventaja.imagen.asset).url()} fill alt={`icono-${index+1}`} />
+                                    <Image src={buildImages(ventaja.imagen.asset).url()} fill alt={`icono-${index+1}`} className={inText ? "view" : ""} />
                                 </div>
                                 <div className='content'>
-                                    {ventaja.title}
+                                    <AnimatedText
+                                        animation={{
+                                            y: "30px",
+                                            ease: "ease",
+                                        }}
+                                        duration={inText ? 0.8 : 0}
+                                        interval={0.06}
+                                        type="words"
+                                    >
+                                        {ventaja.title}
+                                    </AnimatedText>
                                 </div>
                             </div>
                         ))}
                     </div>
                     <div className='complemento'>
-                        Nuestro Crash Course te brindará los conocimientos, estrategias y la asesoría que requieres para iniciar tu experiencia dentro del mundo crypto.
+                        <AnimatedText
+                            animation={{
+                                y: "30px",
+                                ease: "ease",
+                            }}
+                            duration={inText ? 0.8 : 0}
+                            interval={0.06}
+                            type="words"
+                        >
+                            Nuestro Crash Course te brindará los conocimientos, estrategias y la asesoría que requieres para iniciar tu experiencia dentro del mundo crypto.
+                        </AnimatedText>
                     </div>
                     <div className='button'>
                         <Link href="/#contacto" legacyBehavior scroll={false}>

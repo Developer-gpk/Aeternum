@@ -3,8 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Crypto1, Crypto2, Crypto3 } from 'ui'
 import { Parallax  } from 'react-scroll-parallax'
+import { useInView } from "react-hook-inview"
 
 export default function Pregunta(){
+    const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
     return(
         <section className="block pregunta" id="pregunta">
             <Parallax speed={3}>
@@ -24,7 +26,7 @@ export default function Pregunta(){
             </div>
             <div className="holder">
                 <div className="container-fluid">
-                    <div className="title">
+                    <div className={`title ${inView ? "view" : ""}`} ref={ref}>
                         <span>¿Ya te convenciste?</span><br />
                         Recuerda que el tiempo es dinero
                     </div>

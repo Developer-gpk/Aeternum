@@ -341,6 +341,22 @@
                         border-radius: 50%;
                     }
                 }
+                .iconA{
+                    position: absolute;
+                    max-width: 79px;
+                    width: 100%;
+                    max-height: 70px;
+                    height: 100%;
+                    right: 57%;
+                    transform: translateX(50%);
+                    bottom: 66px;
+                    img{
+                        position: relative !important;
+                        display: block;
+                        max-height: 70px!important;
+                        height: 70px !important;
+                    }
+                }
             }
         }
     }

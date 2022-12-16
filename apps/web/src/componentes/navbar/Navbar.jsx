@@ -8,8 +8,8 @@ import { AeternumAcedemyLogo } from 'ui'
 export default function Navbar(){
     const [isActive, setIsActive] = useState(false)
     const router = useRouter()
-    const onClickDown = () =>{
-        scroll.scrollTo('contacto', scrollType)
+    const onClickUp = () =>{
+        scroll.scrollToTop()
     }
     const scrollType = {
         duration: 500,
@@ -33,7 +33,7 @@ export default function Navbar(){
             <div className="holder">
                 <div className="container-fluid">
                     <div className="logo">
-                        <Link href="/" >
+                        <Link onClick={onClickUp} >
                             <Image src={AeternumAcedemyLogo} fill alt='Logo Aeternum' quality={100} />
                         </Link>
                     </div>

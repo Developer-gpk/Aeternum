@@ -8,7 +8,7 @@ import Title from "react-vanilla-tilt"
 
 
 export default function Curso({ aprende }){
-    const [ref, inView] = useInView({ threshold: 0 });
+    const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
     const options = {
         max: 30,
         scale: 1.0,
@@ -38,9 +38,9 @@ export default function Curso({ aprende }){
                         </AnimatedText>
                     </div>
                     <div className='logo'>
-                        <Image src={Logo} fill alt='Logo Aeternum' />
+                        <Image src={Logo} fill alt='Logo Aeternum' className={inView ? "view" : ""} />
                     </div>
-                    <div className='text'>
+                    <div className={`text ${inView ? "isActive" : ""}`}>
                         Somos una empresa con <span>más de 10 años de experiencia</span> en la industria Blockchain, misma que nos ha permitido desarrollar <span>nuestra propia metodología: Learn, Earn & Protect</span>
                     </div>
                     <div className='flex-row'>

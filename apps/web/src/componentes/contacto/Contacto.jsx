@@ -7,7 +7,8 @@ import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
 import { PayPalButtons } from '@paypal/react-paypal-js'
 import Axios from 'axios'
-import { setFips } from 'crypto'
+import AnimatedText from "react-animated-text-content"
+import { useInView } from "react-hook-inview"
 
 const steps = ["Formulario", "Fromas de pago"]
 
@@ -17,6 +18,7 @@ export default function Contacto({ months }){
     const isLastStep = activeStep === steps.length - 1
     const [ open, setOpen ] = useState(false);
     const [ isHidden, setIsHidden ] = useState(true)
+    const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
     const validation = Yup.object().shape({
         nombre: Yup.string().required(),
         email: Yup.string().email().required(),
@@ -141,10 +143,30 @@ export default function Contacto({ months }){
             <div className="holder">
                 <div className="container-fluid">
                     <div className='subtitle'>
-                        ÚNETE AHORA
+                        <AnimatedText
+                            animation={{
+                                y: "30px",
+                                ease: "ease",
+                            }}
+                            duration={inView ? 0.8 : 0}
+                            interval={0.06}
+                            type="words"
+                        >
+                            ÚNETE AHORA
+                        </AnimatedText>
                     </div>
                     <div className='title'>
-                        Contamos con fechas disponibles
+                        <AnimatedText
+                            animation={{
+                                y: "30px",
+                                ease: "ease",
+                            }}
+                            duration={inView ? 0.8 : 0}
+                            interval={0.06}
+                            type="words"
+                        >
+                            Contamos con fechas disponibles
+                        </AnimatedText>
                     </div>
                     <div className='text-schedule'>
                         <div className='icon-schedule'>
@@ -214,6 +236,9 @@ export default function Contacto({ months }){
                     <div className='imagen'>
                         <div className='blockchain'>
                             <Image src={BlockChain} fill alt='BlockChain' />
+                        </div>
+                        <div className='iconA'>
+                            <Image src={IconoA} fill alt='BlockChain' />
                         </div>
                     </div>
                 </div>

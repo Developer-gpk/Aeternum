@@ -54,6 +54,12 @@
                     font-family: "Urbane-Bold";
                     font-size: 38px;
                 }
+                transform: translateY(100%) translateZ(0);
+                animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                &.view{
+                    transform: translateY(-10%) translateZ(0);
+                    animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                }
             }
             .button{
                 margin-top: 50px;
@@ -74,7 +80,6 @@
                     overflow: hidden;
                     z-index: 1;
                     border-radius: 25px;
-                    
                     &::before {
                         content: "";
                         position: absolute;

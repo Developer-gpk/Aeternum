@@ -5,9 +5,10 @@ import { SmartPhone2 } from 'ui'
 import { Parallax  } from 'react-scroll-parallax'
 import { useInView } from "react-hook-inview"
 import { separator } from '../../../libs/complementos'
+import AnimatedText from "react-animated-text-content"
 
 export default function Inversion({ titlePrecio, titlePrecioCrypto, precio, precioCrypto, adicionalPrecioCrypto}){
-    const [ref, inView] = useInView({ threshold: 0 });
+    const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
     return(
         <section className='block inversion' id='inversion'>
             <div className="holder">
@@ -19,16 +20,16 @@ export default function Inversion({ titlePrecio, titlePrecioCrypto, precio, prec
                             </div>
                             <div className='precios'>
                                 <div className="transferencia">
-                                    <div className='costo'><strong>$</strong> {separator(precio)} <span>MXN</span></div>
-                                    <div className="titulo">{titlePrecio}</div>
+                                    <div className={`costo ${inView ? "isActive" : ""}`}><strong>$</strong> {separator(precio)} <span>MXN</span></div>
+                                    <div className={`titulo ${inView ? "isActive" : ""}`}>{titlePrecio}</div>
                                 </div>
                                 <div className="crypto">
-                                    <div className='costo'><strong>$</strong> {separator(precioCrypto)} <span>MXN</span></div>
-                                    <div className="titulo">{titlePrecioCrypto}</div>
-                                    <div className="subtitulo">{adicionalPrecioCrypto}</div>
+                                    <div className={`costo ${inView ? "isActive" : ""}`}><strong>$</strong> {separator(precioCrypto)} <span>MXN</span></div>
+                                    <div className={`titulo ${inView ? "isActive" : ""}`}>{titlePrecioCrypto}</div>
+                                    <div className={`subtitulo ${inView ? "isActive" : ""}`}>{adicionalPrecioCrypto}</div>
                                 </div>
                             </div>
-                            <div className='terminos'>
+                            <div className={`terminos ${inView ? "isActive" : ""}`}>
                                 Si deseas cancelar tu participación favor de hacerlo mínimo con 3 días de anticipación. Una vez realizada la operación de crypto, no hay devolución.
                             </div>
                             <div className='button'>
