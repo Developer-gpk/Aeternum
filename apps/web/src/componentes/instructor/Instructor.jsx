@@ -9,6 +9,7 @@ import { Reveal } from "react-awesome-reveal"
 
 export default function Instructor({ instructor }){
     const [ref, inView] = useInView({ threshold: 0, unobserveOnEnter: true });
+    const [ins, inIns] = useInView({ threshold: 0, unobserveOnEnter: true });
     const customAnimation = keyframes`
         0% {
             transform: rotateY(-30deg) translateY(300px) skewY(30deg);
@@ -40,9 +41,9 @@ export default function Instructor({ instructor }){
                         </AnimatedText>
                     </div>
                     <div className="flex-row">
-                        <div className='imagen' ref={ref}>
-                            <Reveal keyframes={inView ? customAnimation : ""}>
-                                <Image src={buildImages(instructor?.imagen?.asset).url()} fill alt={instructor.nombre}  />
+                        <div className='imagen' ref={ins}>
+                            <Reveal keyframes={inIns ? customAnimation : ""}>
+                                <Image src={buildImages(instructor?.imagen?.asset).url()} fill alt={instructor.nombre} />
                             </Reveal>
                         </div>
                         <div className='content'>
