@@ -49,7 +49,7 @@ export default function Inversion({ titlePrecio, titlePrecioCrypto, precio, prec
                                 </Link>
                             </div>
                         </div>
-                        <Reveal keyframes={inView ? customAnimation : ""} style={{maxWidth: "533px", position: "relative", width: "100%"}}>
+                        <Reveal keyframes={customAnimation} style={{maxWidth: "533px", position: "relative", width: "100%"}}>
                             <div className={`imagen `}>
                                 <div className="background">
                                     <Parallax speed={-5}>

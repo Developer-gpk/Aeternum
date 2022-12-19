@@ -26,6 +26,7 @@ import GoplekLogo from './icono/goplek.svg'
 import TexturaFooter from './imagenes/textura-footer.webp'
 import Boreal from './icono/boreal.svg'
 import Whats from './icono/wapp-1.svg'
+import Cripto from './icono/ciprto.svg'
 
 export{
     Textura1,
@@ -55,5 +56,6 @@ export{
     GoplekLogo,
     TexturaFooter,
     Boreal,
-    Whats
+    Whats,
+    Cripto
 }

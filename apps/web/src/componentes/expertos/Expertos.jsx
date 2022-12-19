@@ -46,7 +46,7 @@ export default function Expertos({ title1, title2, title3 }){
                                 <a>Has llegado con los expertos.</a>
                             </Link>
                         </div>
-                        <Reveal keyframes={inView ? customAnimation : ""} style={{maxWidth: "551px", position: "relative", width: "100%"}}>
+                        <Reveal keyframes={customAnimation} style={{maxWidth: "551px", position: "relative", width: "100%"}}>
                             <div className={`imagenes`}>
                                 <div className='background'>
                                     <Parallax speed={3}>

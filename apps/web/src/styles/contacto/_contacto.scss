@@ -321,6 +321,24 @@
                                 z-index: 1;
                                 margin-right: 50px;
                             }
+                            a{
+                                max-width: 110px;
+                                width: 100%;
+                                padding: 15px 16px;
+                                border: 1px solid rgba(151,151,151,0.5);
+                                border-radius: 6px;
+                                position: relative;
+                                transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+                                img{
+                                    width: 76px !important;
+                                    position: relative !important;
+                                    display: block !important;
+                                    margin: 0 auto;
+                                }
+                                &:hover{
+                                    background-color: rgba(96,57,228,0.2);
+                                }
+                            }
                         }
                     }
                 }
@@ -655,6 +673,11 @@
                                     position: relative;
                                     z-index: 1;
                                     margin-right: 50px;
+                                }
+                                a{
+                                    max-width: none;
+                                    display: block;
+                                    margin-top: 50px;
                                 }
                             }
                         }

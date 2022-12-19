@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, BlockChain, Textura3, IconoC, IconoA } from 'ui'
+import { Clock, BlockChain, Textura3, IconoC, IconoA, Cripto } from 'ui'
 import { Parallax  } from 'react-scroll-parallax'
 import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
@@ -107,6 +107,9 @@ export default function Contacto({ months }){
                                     }}
                                     style={{ layout: "horizontal", color: 'gold'}} />
                                 </div>
+                                <a href={`https://wa.me/525629776426?text=Hola,%20me%20llamo:%20${values.nombre}%0AQuiero%20unirme%20al%20curso.%0AMi%20correo%20es:%20${values.email}%0AMi%20numero%20de%20contacto%20es:${values.phone}%0AEl%20horario%20que%20quiero%20es:${values.horario}%0AY%20quiero%20pagarlo%20con%20criptomonedas`}>
+                                    <Image src={Cripto} fill alt='boton criptomonedas' />
+                                </a>
                             </div>
                         </div>
                     </>

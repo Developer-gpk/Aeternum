@@ -49,7 +49,6 @@
                 width: 100%;
                 margin: 0 auto;
                 margin-top: 35px;
-                
                 img{
                     position: relative !important;
                     display: block;
@@ -72,11 +71,11 @@
                 height: 100%;
                 overflow: hidden;
                 transform: translateY(100%) translateZ(0);
-                                animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
-                                &.isActive{
-                                    transform: translateY(-10%) translateZ(0);
-                                    animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
-                                }
+                animation: 0s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_leave;
+                &.isActive{
+                    transform: translateY(-10%) translateZ(0);
+                    animation: 2s cubic-bezier(0.430, 0.195, 0.020, 1.000) 0s forwards line_enter;
+                }
                 span{
                     font-family: "Urbane-DemiBold";
                     color: $degrado1;
@@ -226,10 +225,20 @@
                     font-size: 30px;
                     padding: 0 45px;
                 }
+                .text{
+                    margin-top: 35px;
+                    max-width: none;
+                    width: 100%;
+                    margin: 35px auto 0 auto;
+                    font-family: "Urbane-Light";
+                    font-size: 15px;
+                    text-align: center;
+                    max-height: 135px;
+                }
                 .flex-row{
                     display: block;
                     justify-content: space-evenly;
-                    margin-top: 101px;
+                    margin-top: 60px;
                     position: relative;
                     .tilt{
                         max-width: none !important;

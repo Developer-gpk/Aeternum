@@ -32,7 +32,7 @@ export default function Pregunta(){
                     </div>
                     <div className='button'>
                         <Link href="/#contacto" legacyBehavior>
-                            <a> Inscríbete ya a Nuestro Crash Course</a>
+                            <a> Inscríbete ya a nuestro Crash Course</a>
                         </Link>
                     </div>
                 </div>
