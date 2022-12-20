@@ -131,7 +131,21 @@ export default function Contacto({ months }){
         }
     }
     async function _submitForm(values, actions) {
-        console.log(values)
+        try {
+            const endpoint = `https://www.goplek.com/mailer/send-mail-v1.php`;
+            const res = await fetch(endpoint, {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: `data=${JSON.stringify({
+                host: "aeternumcrypto.com",
+                data: values,
+              })}`,
+            });
+            const data = await res.text();
+            console.log(data)
+          } catch (error) {
+            console.log(error)
+          }
     }
     return(
         <section className="block contacto" id="contacto">
