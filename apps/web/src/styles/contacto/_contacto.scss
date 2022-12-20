@@ -175,8 +175,9 @@
                         display: flex;
                         justify-content: space-between;
                         .button{
+                            max-width: 284px;
+                            width: 100%;
                             button{
-                                max-width: 284px;
                                 width: 100%;
                                 height: 50px;
                                 background: $backgroundButton;
@@ -527,10 +528,12 @@
                         .buttons{
                             margin-top: 75px;
                             display: flex;
-                            justify-content: space-between;
+                            flex-flow: row wrap-reverse;
                             .button{
+                                max-width: none;
+                                width: 100%;
                                 button{
-                                    max-width: 284px;
+                                    max-width: none;
                                     width: 100%;
                                     height: 50px;
                                     background: $backgroundButton;
@@ -547,6 +550,7 @@
                                     border-radius: 25px;
                                     border: none;
                                     cursor: pointer;
+                                    margin-top: 10px;
                                     &::before {
                                         content: "";
                                         position: absolute;
