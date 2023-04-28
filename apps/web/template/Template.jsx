@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Footer from '../src/componentes/footer/Footer'
 import Navbar from '../src/componentes/navbar/Navbar'
 import { Whats } from 'ui'
+import Script from 'next/script'
 
 export default function Template({ children, title, description, keywords }){
     const router = useRouter()
