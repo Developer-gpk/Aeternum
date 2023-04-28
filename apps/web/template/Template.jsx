@@ -11,16 +11,26 @@ export default function Template({ children, title, description, keywords }){
     console.log(router)
     return(
         <>
+            <Script id='analytics-cdn' strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-DK3N7G353H`} />
+            <Script id='script-analytics' strategy="lazyOnload">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-DK3N7G353H');
+                `}
+            </Script>
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <meta name="keywords" content={keywords} />
                 <link rel="shortcut icon" href="/FAVICON.jpg" type="image/x-icon" />
-                <link rel="canonical" href="https://aeternumcrypto.com/" />
+                <link rel="canonical" href="https://crashcourse.aeternumcrypto.com/" />
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content="https://aeternumcrypto.com/SOCIAL-1.jpg" />
+                <meta property="og:image" content="https://crashcourse.aeternumcrypto.com/SOCIAL-1.jpg" />
                 <meta property="og:url" content="" />
                 <meta property="og:site_name" content="Aeternum" />
             </Head>
